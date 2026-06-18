@@ -8,7 +8,7 @@ lastUpdated: false
 
 Hello and welcome to **NEKOSBEST's** developer documentation. 
 
-We've been active since **February 2021** and serve high quality, family friendly anime images & GIFs of all sorts of categories at fast speeds with low latency.
+We've been active since **February 2021** and serve high quality, family friendly anime images & GIFs of all sorts of categories with low latency.
 
 ## Our top features
 
@@ -47,7 +47,7 @@ We've been active since **February 2021** and serve high quality, family friendl
   <div class="feature-card">
     <img src="/icons/burst_mode.svg" alt="Wide variety of endpoints" />
     <h3>Wide variety of endpoints</h3>
-    <p>A total of 63 endpoints with more planned.</p>
+    <p>A total of 4 images and 59 GIF endpoints with more planned.</p>
   </div>
 
   <div class="feature-card">
