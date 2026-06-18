@@ -4,7 +4,7 @@ outline: [2]
 ---
 # Privacy Policy
 
-Last updated: **06.05.2026**
+Last updated: **18.06.2026**
 
 This Privacy Policy explains how **NEKOSBEST** (“we”, “us”, “our”) processes information when you use the **nekos.best website**, the **NEKOSBEST API**, and related documentation.
 
@@ -52,10 +52,6 @@ We use **Umami Analytics**, which is:
 - Cookie-free
 
 Analytics data is used only to understand general usage patterns and improve service reliability.
-
-### 2.5 Error Monitoring
-We use **Sentry** to monitor errors and stability.  
-Error reports may include technical information such as request metadata and IP-derived data, but are used solely for debugging and reliability purposes.
 
 ## 3. Purpose of Processing
 
