@@ -26,6 +26,10 @@ Replace `:version` with one of the supported versions below.
   </div>
 </div>
 
+::: warning Important
+Before making any requests, please read the [User-Agent documentation](/getting-started/api-reference.html#user-agent). All requests must include a properly formatted `User-Agent` header.
+:::
+
 ## Endpoints
 
 ### <Badge type="tip" text="GET" class="http-get" /> /endpoints

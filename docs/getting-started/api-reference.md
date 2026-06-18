@@ -21,17 +21,31 @@ Every response includes the following headers to help you track and respect rate
 | `/search`     | 7 requests per 5 seconds                    |
 | `/:category`  | 200 requests per minute (per category)      |
 
-
 ## User-Agent
 
-All requests must include a `User-Agent` header. Please use the following format: `APP_NAME/VERSION (WEBSITE_URL)`. \
-For example: `NekoApp/1.0 (https://example.com)`
+All requests must include a `User-Agent` header. Please use the following format: `APP_NAME (CONTACT_INFO)`.\
+For example: `NekoApp (https://example.com)` or `NekoApp (dev@example.com)`
 
-Do not spoof browser strings like `Mozilla/5.0 ...` unless the request is actually coming from a browser.
+**Naming Guidelines:**
 
-Avoid using library defaults such as `python-requests`, `okhttp`, `axios`, `node`, or `curl`, impersonating known crawlers like `Googlebot` or `Bingbot`, placeholder strings like `test` or `bot`, or the example value above. Any of these are likely to get your requests blocked.
+* **Be specific:** Do not use generic names like "Discord Bot", "WhatsApp Bot", or "Telegram Bot". Your application must have a unique name.
+* **Avoid placeholders:** Do not use strings like `test`, `bot`, or the example value above.
+* **No library defaults:** Avoid using default library strings such as `python-requests`, `okhttp`, `axios`, `node`, or `Go-http-client`.
 
-The URL doesn't need to be a website. A bot invite link, discovery page, or top.gg (or similar) listing works too.
+**Contact Information Options:**\
+The contact info does not have to be a traditional website. Any of the following are acceptable ways to provide identification:
+
+* A direct contact email address.
+* A project website or **public** repository URL (e.g., GitHub, GitLab).
+* A bot invite link or discovery page.
+* A listing URL (e.g., top.gg or similar directories).
+
+**Spoofing and Impersonation:**
+
+* **Do not spoof browser strings.** The `Mozilla/5.0 ...` format is strictly reserved for real web browsers and Cloudflare-verified bots.
+* **Do not impersonate known crawlers** like `Googlebot` or `Bingbot`.
+
+*Failure to follow these guidelines and using generic, default, or spoofed values will likely result in your requests being blocked.*
 
 ## Categories
 

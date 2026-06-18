@@ -50,11 +50,8 @@ Listed below are some of the most commonly asked questions.
 
 ## Debugging / Errors
 
-#### Why am I getting a 403 (Forbidden) when making a request?
-> There are two common reasons for receiving a **403** response:
->
-> 1. Your IP address, IP range, or Autonomous System (AS) may have been banned due to suspicious activity. To resolve this, please contact us via our [Discord server](https://nekos.best/discord) or email us at **[contact@nekos.best](mailto:contact@nekos.best)**.
-> 2. Since August 2024, all requests must include a `User-Agent` header. Make sure your request sets this header properly.
+#### Why am I getting the ERR-C code "NB-BXIUA"?
+> While empty `User-Agent` headers have been blocked since August 2024, new formatting guidelines were introduced in June 2026. Make sure to follow the requested format, as using library defaults or an incorrect format may result in your requests being automatically rejected. Please review our [User-Agent documentation](/getting-started/api-reference.html#user-agent) to ensure your setup is correct.
 
 #### I use a VPN or proxy, but now I cannot make requests anymore.
 > VPNs and proxies are permitted, but come with some important limitations. Their IP addresses are shared across many users, meaning a single bad actor can get an IP banned and affect everyone else using it. Banned VPN/proxy IPs are permanently blocked with no exceptions, and are flagged at a much higher rate than regular IPs. If you rely on one and lose access, unfortunately there is nothing we can do.
