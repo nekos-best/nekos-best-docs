@@ -2,7 +2,11 @@
 
 ## Using fetch
 ```js
-fetch('https://nekos.best/api/v2/neko')
+fetch('https://nekos.best/api/v2/neko', {
+  headers: {
+    'User-Agent': 'NekosBest (https://example.com)'
+  }
+})
   .then(response => response.json())
   .then(json => console.log(json.results[0].url))
 
@@ -12,7 +16,11 @@ fetch('https://nekos.best/api/v2/neko')
 ## Using async
 ```js
 async function getNeko() {
-    const response = await fetch('https://nekos.best/api/v2/neko')
+    const response = await fetch('https://nekos.best/api/v2/neko', {
+        headers: {
+            'User-Agent': 'NekosBest (https://example.com)'
+        }
+    })
     const json = await response.json()
     console.log(json.results[0].url)
 }
