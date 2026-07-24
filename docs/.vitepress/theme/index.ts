@@ -55,7 +55,7 @@ export default {
           matched = (userLang.includes("tw") || userLang.includes("hk") || userLang.includes("hant")) ? "zh-TW" : "zh-CN";
         }
         if (matched && supportedLangs.includes(matched)) {
-          router.go(`/${matched}/`);
+          window.location.replace(`/${matched}/`);
         }
       }
     }
