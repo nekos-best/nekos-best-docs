@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "vitepress-plugin-group-icons": "^1.7.1"
+    "vitepress-plugin-group-icons": "^1.8.1"
   },
   "devDependencies": {
-    "vitepress": "^2.0.0-alpha.16"
+    "vitepress": "^2.0.0-alpha.20"
   },
   "scripts": {
     "dev": "vitepress dev docs",
