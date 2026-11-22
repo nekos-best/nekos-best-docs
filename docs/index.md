@@ -39,8 +39,8 @@ hero:
 
   <div class="feature-grid home-grid-3">
     <a class="feature-card feature-card-link" href="/legal/tos">
-      <img src="/icons/gavel.svg" alt="Terms and Conditions" />
-      <h3>Terms and Conditions</h3>
+      <img src="/icons/gavel.svg" alt="Terms of Service" />
+      <h3>Terms of Service</h3>
       <p>The basic rules and terms for using our website and services.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">

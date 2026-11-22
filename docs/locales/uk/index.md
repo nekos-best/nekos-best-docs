@@ -2,11 +2,11 @@
 layout: home
 
 hero:
-  name: "ДОКУМЕНТАЦІЯ\nAPI NEKOSBEST"
+  name: "NEKOSBEST\nДОКУМЕНТАЦІЯ API"
   tagline: Офіційна документація для розробників NEKOSBEST.
   actions:
     - theme: brand
-      text: З чого почати
+      text: Початок роботи
       link: /uk/getting-started/introduction
     - theme: alt
       text: Ендпоінти API
@@ -23,12 +23,12 @@ hero:
     <a class="feature-card feature-card-link" href="/uk/getting-started/introduction">
       <img src="/icons/person.svg" alt="Вступ" />
       <h3>Вступ</h3>
-      <p>Хто ми такі та наші популярні можливості.</p>
+      <p>Хто ми та які наші головні можливості.</p>
     </a>
     <a class="feature-card feature-card-link" href="/uk/getting-started/api-endpoints">
       <img src="/icons/http.svg" alt="Ендпоінти API" />
       <h3>Ендпоінти API</h3>
-      <p>Усі ендпоінти, параметри, формати відповідей та приклади виводу.</p>
+      <p>Усі ендпоінти, параметри, формати відповідей і приклади.</p>
     </a>
     <a class="feature-card feature-card-link" href="/uk/getting-started/faq">
       <img src="/icons/question_mark.svg" alt="Часті запитання" />
@@ -41,7 +41,7 @@ hero:
     <a class="feature-card feature-card-link" href="/legal/tos">
       <img src="/icons/gavel.svg" alt="Умови використання" />
       <h3>Умови використання</h3>
-      <p>Основні правила та умови використання нашого вебсайту та сервісів.</p>
+      <p>Основні правила та умови використання нашого вебсайту й сервісів.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="Політика конфіденційності" />
@@ -51,7 +51,7 @@ hero:
     <a class="feature-card feature-card-link" href="/legal/dmca">
       <img src="/icons/bid_landscape_disabled.svg" alt="Скарги DMCA" />
       <h3>Скарги DMCA</h3>
-      <p>Процедура подання претензій щодо порушення авторських прав та видалення контенту.</p>
+      <p>Порядок подання скарг щодо порушення авторських прав і запитів на видалення контенту.</p>
     </a>
   </div>
   

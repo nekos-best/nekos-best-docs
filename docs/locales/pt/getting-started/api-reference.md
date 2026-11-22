@@ -6,52 +6,55 @@ outline: [2, 3]
 
 ## Limites de taxa (Rate Limits)
 
-Cada resposta contém os seguintes cabeçalhos para ajudá-lo a rastrear e respeitar os limites de taxa:
+Todas as respostas incluem os seguintes cabeçalhos para ajudar você a acompanhar e respeitar os limites de taxa:
 
-| Cabeçalho               | Descrição                                                          |
-| ----------------------- | ------------------------------------------------------------------ |
-| `x-rate-limit-limit`    | Duração da janela atual do limite de taxa (ex.: `1m`)              |
-| `x-rate-limit-remaining`| Requisições restantes na janela atual                              |
-| `x-rate-limit-reset`    | Carimbo de data/hora ISO 8601 de quando a janela atual será redefinida |
+| Cabeçalho                | Descrição                                                            |
+| ------------------------ | -------------------------------------------------------------------- |
+| `x-rate-limit-limit`     | Duração da janela atual do limite de taxa (ex.: `1m`)                |
+| `x-rate-limit-remaining` | Requisições restantes na janela atual                                |
+| `x-rate-limit-reset`     | Timestamp ISO 8601 indicando quando a janela atual será redefinida   |
 
 ### Limites
 
-| Endpoint      | Limite                                      |
-| ------------- | ------------------------------------------- |
-| `/search`     | 7 requisições a cada 5 segundos             |
-| `/:category`  | 200 requisições por minuto (por categoria)  |
+| Endpoint                       | Limite                                                                |
+| ------------------------------ | --------------------------------------------------------------------- |
+| `/search`                      | 7 requisições a cada 5 segundos                                       |
+| `/:category`                   | 200 requisições por minuto (por categoria)                            |
+| `/:category/:filename.:format` | 200 requisições por minuto (compartilhado entre arquivos `.png` e `.gif`) |
 
 ## User-Agent
 
-Todas as requisições devem incluir um cabeçalho `User-Agent`. Por favor, use o seguinte formato: `NOME_DO_APP (INFO_DE_CONTATO)`.\
+Embora um cabeçalho `User-Agent` personalizado não seja obrigatório, recomendamos definir um em suas requisições usando o seguinte formato: `NOME_DO_APP (INFO_DE_CONTATO)`.\
 Por exemplo: `NekoApp (https://example.com)` ou `NekoApp (dev@example.com)`
 
-**Diretrizes para nomeação:**
+**Sugestões de nomenclatura:**
 
-* **Seja específico:** Não use nomes genéricos como "Bot do Discord", "Bot do WhatsApp" ou "Bot do Telegram". Sua aplicação deve ter um nome único.
-* **Evite marcadores genéricos:** Não use strings como `test`, `bot` ou o valor de exemplo acima.
-* **Sem valores padrão de bibliotecas:** Evite usar strings padrão de bibliotecas como `python-requests`, `okhttp`, `axios`, `node` ou `Go-http-client`.
+* **Seja específico:** Use o nome real da sua aplicação em vez de rótulos genéricos como "Discord Bot", "WhatsApp Bot" ou "Telegram Bot".
+* **Evite placeholders:** Evite strings genéricas como `test`, `bot` ou os valores de exemplo acima.
+* **Evite padrões de bibliotecas:** Dê preferência a um valor personalizado em vez das strings padrão de bibliotecas como `python-requests`, `okhttp`, `axios`, `node` ou `Go-http-client`.
 
 **Opções de informações de contato:**\
-A informação de contato não precisa ser um site tradicional. Qualquer uma das seguintes formas é aceitável para identificação:
+As informações de contato não precisam ser um site tradicional. Qualquer uma das opções abaixo funciona bem:
 
 * Um endereço de e-mail de contato direto.
-* Um site do projeto ou um repositório **público** (ex.: GitHub, GitLab).
-* Um link de convite do bot ou página de descoberta (Discovery).
+* O site do projeto ou a URL de um repositório **público** (ex.: GitHub, GitLab).
+* Um link de convite do bot ou página de descoberta.
 * Uma URL de listagem (ex.: top.gg ou diretórios semelhantes).
 
-**Falsificação e falsidade ideológica (Spoofing & Impersonation):**
+**Spoofing e falsificação:**
 
-* **Não forje strings de navegador.** O formato `Mozilla/5.0 ...` é estritamente reservado para navegadores web reais e bots verificados pela Cloudflare.
+* **Não simule strings de navegador.** O formato `Mozilla/5.0 ...` é reservado para navegadores reais e bots verificados pela Cloudflare.
 * **Não se passe por crawlers conhecidos**, como `Googlebot` ou `Bingbot`.
 
-*O não cumprimento dessas diretrizes, bem como o uso de valores genéricos, padrão ou forjados, muito provavelmente resultará no bloqueio de suas requisições.*
+::: info
+Não definir um cabeçalho `User-Agent` personalizado aumenta as chances de suas requisições serem sinalizadas ou banidas pelo nosso sistema automático de detecção de abuso (`NB-BCFSD`).
+:::
 
 ## Categorias
 
 As categorias definem o tipo de conteúdo retornado pela API. Cada categoria está associada a um formato de arquivo fixo.
 
-### Imagens
+### Imagens (4)
 
 <div class="category-grid">
   <span class="category-chip">husbando</span>
@@ -60,7 +63,7 @@ As categorias definem o tipo de conteúdo retornado pela API. Cada categoria est
   <span class="category-chip">waifu</span>
 </div>
 
-### GIFs
+### GIFs (59)
 
 <div class="category-grid">
   <span class="category-chip">angry</span>
@@ -126,9 +129,9 @@ As categorias definem o tipo de conteúdo retornado pela API. Cada categoria est
 
 ### Campos de resposta
 
-| Tipo    | Campos                                      |
-| ------- | ------------------------------------------- |
-| Imagens | `artist_name`, `artist_href`, `source_url`  |
-| GIFs    | `anime_name`                                |
+| Tipo    | Campos                                     |
+| ------- | ------------------------------------------ |
+| Imagens | `artist_name`, `artist_href`, `source_url` |
+| GIFs    | `anime_name`                               |
 
-`url` e `dimensions` estão incluídos em ambos.
+`url` e `dimensions` estão presentes em ambos.

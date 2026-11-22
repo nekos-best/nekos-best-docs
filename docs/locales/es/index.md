@@ -33,32 +33,32 @@ hero:
     <a class="feature-card feature-card-link" href="/es/getting-started/faq">
       <img src="/icons/question_mark.svg" alt="Preguntas frecuentes" />
       <h3>Preguntas frecuentes</h3>
-      <p>Algunas de las preguntas más frecuentes.</p>
+      <p>Respuestas a las dudas más comunes.</p>
     </a>
   </div>
 
   <div class="feature-grid home-grid-3">
     <a class="feature-card feature-card-link" href="/legal/tos">
-      <img src="/icons/gavel.svg" alt="Términos de servicio" />
-      <h3>Términos de servicio</h3>
-      <p>Las reglas y condiciones fundamentales para usar nuestro sitio web y servicios.</p>
+      <img src="/icons/gavel.svg" alt="Términos de Servicio" />
+      <h3>Términos de Servicio</h3>
+      <p>Las reglas y condiciones básicas para usar nuestro sitio web y servicios.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="Política de privacidad" />
       <h3>Política de privacidad</h3>
-      <p>Cómo recopilamos, usamos, almacenamos y protegemos sus datos personales.</p>
+      <p>Cómo recopilamos, usamos, almacenamos y protegemos tus datos personales.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/dmca">
       <img src="/icons/bid_landscape_disabled.svg" alt="Retirada DMCA" />
       <h3>Retirada DMCA</h3>
-      <p>Procedimiento para enviar reclamaciones de derechos de autor y solicitudes de eliminación de contenido.</p>
+      <p>Cómo enviar reclamaciones por derechos de autor y solicitudes de eliminación de contenido.</p>
     </a>
   </div>
   
 </div>
 
 <div class="home-section">
-    <h1 class="home-title">Librerías Oficiales</h1>
+    <h1 class="home-title">Bibliotecas oficiales</h1>
 
   <div class="feature-grid home-grid-3">
     <a class="feature-card feature-card-link" href="https://github.com/nekos-best/nekos-best.py">

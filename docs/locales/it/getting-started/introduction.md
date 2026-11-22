@@ -6,9 +6,9 @@ lastUpdated: false
 
 ## Chi siamo
 
-Benvenuto nella documentazione per sviluppatori di **NEKOSBEST**. 
+Ciao e benvenuto nella documentazione per sviluppatori di **NEKOSBEST**.
 
-Siamo attivi da **febbraio 2021** e forniamo immagini e GIF anime di alta qualità per tutta la famiglia (SFW) con bassa latenza.
+Siamo attivi da **febbraio 2021** e forniamo immagini e GIF anime di alta qualità, adatte a tutta la famiglia (SFW), in tantissime categorie e con bassa latenza.
 
 ## Funzionalità principali
 
@@ -17,43 +17,43 @@ Siamo attivi da **febbraio 2021** e forniamo immagini e GIF anime di alta qualit
   <div class="feature-card">
     <img src="/icons/key_off.svg" alt="Nessuna autenticazione richiesta" />
     <h3>Nessuna autenticazione richiesta</h3>
-    <p>Nessun token o chiave API richiesta. Invia semplicemente le richieste.</p>
+    <p>Nessun token o chiave API necessaria. Invia subito le tue richieste.</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/sfw.svg" alt="Completamente SFW" />
     <h3>Completamente SFW</h3>
-    <p>Tutte le immagini e le GIF sono adatte a tutti (Safe for Work).</p>
+    <p>Tutte le immagini e le GIF sono adatte a ogni contesto (Safe for Work).</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/stylus_fountain_pen.svg" alt="Crediti agli autori" />
     <h3>Crediti agli autori</h3>
-    <p>Informazioni su artisti e fonti fornite quando disponibili.</p>
+    <p>Le informazioni su artisti e fonti sono incluse quando disponibili.</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/money_off.svg" alt="Completamente gratuito" />
     <h3>Completamente gratuito</h3>
-    <p>Utilizzo totalmente gratuito senza paywall o piani premium.</p>
+    <p>Totalmente gratuito, senza paywall né piani a pagamento.</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/bolt.svg" alt="Veloce e affidabile" />
     <h3>Veloce e affidabile</h3>
-    <p>Elevata disponibilità e risposte a bassa latenza.</p>
+    <p>Alta disponibilità, risposte a bassa latenza e GIF leggere e ottimizzate (~900 KB in media).</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/burst_mode.svg" alt="Ampia varietà di endpoint" />
     <h3>Ampia varietà di endpoint</h3>
-    <p>Un totale di 4 endpoint immagine e 59 endpoint GIF.</p>
+    <p>Oltre 5.000 risorse distribuite su 4 endpoint per immagini e 59 per GIF, con altri in arrivo.</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/desktop_cloud.svg" alt="CORS abilitato" />
     <h3>CORS abilitato</h3>
-    <p>Pronto per progetti basati su browser.</p>
+    <p>Pronto all'uso per progetti basati su browser.</p>
   </div>
 
   <div class="feature-card">
@@ -64,8 +64,8 @@ Siamo attivi da **febbraio 2021** e forniamo immagini e GIF anime di alta qualit
 
 </div>
 
-## Supporto e feedback
+## Supporto, suggerimenti e feedback
 
-Se hai bisogno di aiuto, unisciti al nostro [server Discord](https://nekos.best/discord?ref=docs).
+Se hai bisogno di aiuto con la nostra API, puoi unirti al nostro [server Discord](https://nekos.best/discord?ref=docs) in qualsiasi momento.
 
-Puoi condividere feedback su Discord o via [e-mail](mailto:contact@nekos.best).
+Suggerimenti e feedback sono sempre benvenuti: puoi condividerli sul nostro server Discord o via [e-mail](mailto:contact@nekos.best).

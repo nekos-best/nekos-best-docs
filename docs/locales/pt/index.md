@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "DOCS API\nNEKOSBEST"
-  tagline: Documentação oficial de desenvolvedores da NEKOSBEST.
+  tagline: Documentação oficial para desenvolvedores da NEKOSBEST.
   actions:
     - theme: brand
       text: Primeiros Passos
@@ -23,7 +23,7 @@ hero:
     <a class="feature-card feature-card-link" href="/pt/getting-started/introduction">
       <img src="/icons/person.svg" alt="Introdução" />
       <h3>Introdução</h3>
-      <p>Quem somos e nossas funcionalidades mais populares.</p>
+      <p>Quem somos e nossos recursos mais populares.</p>
     </a>
     <a class="feature-card feature-card-link" href="/pt/getting-started/api-endpoints">
       <img src="/icons/http.svg" alt="Endpoints da API" />
@@ -33,7 +33,7 @@ hero:
     <a class="feature-card feature-card-link" href="/pt/getting-started/faq">
       <img src="/icons/question_mark.svg" alt="Perguntas Frequentes" />
       <h3>Perguntas Frequentes</h3>
-      <p>Algumas das perguntas mais frequentes.</p>
+      <p>Respostas para as dúvidas mais comuns.</p>
     </a>
   </div>
 
@@ -41,7 +41,7 @@ hero:
     <a class="feature-card feature-card-link" href="/legal/tos">
       <img src="/icons/gavel.svg" alt="Termos de Serviço" />
       <h3>Termos de Serviço</h3>
-      <p>As regras e condições fundamentais para a utilização do nosso site e serviços.</p>
+      <p>As regras e condições básicas para usar nosso site e nossos serviços.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="Política de Privacidade" />
@@ -51,7 +51,7 @@ hero:
     <a class="feature-card feature-card-link" href="/legal/dmca">
       <img src="/icons/bid_landscape_disabled.svg" alt="Remoção DMCA" />
       <h3>Remoção DMCA</h3>
-      <p>Procedimento para envio de reclamações de direitos autorais e solicitações de remoção de conteúdo.</p>
+      <p>Procedimentos para enviar notificações de direitos autorais e pedidos de remoção de conteúdo.</p>
     </a>
   </div>
   

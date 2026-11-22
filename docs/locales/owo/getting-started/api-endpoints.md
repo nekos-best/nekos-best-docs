@@ -26,8 +26,8 @@ Wepwace `:version` with one of the suppowted vewsions bewow >w<.
   </div>
 </div>
 
-::: warning Impowtant >w<
-Befowe making any weqwesties, pwease wead the [User-Agent documentawion](/owo/getting-started/api-reference.html#user-agent) OwO. Aww weqwesties must incwude a pwopewwy fowmatted `User-Agent` headew nya~!
+::: tip
+We wecommend setting a custom `User-Agent` headew when making weqwesties nya~! See da [User-Agent documentation](/owo/getting-started/api-reference.html#user-agent) fow suggested fowmatting OwO.
 :::
 
 ## Endpoints UwU

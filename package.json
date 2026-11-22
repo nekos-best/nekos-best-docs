@@ -3,6 +3,7 @@
     "vitepress-plugin-group-icons": "^1.8.1"
   },
   "devDependencies": {
+    "flag-icons": "^7.6.0",
     "vitepress": "^2.0.0-alpha.20"
   },
   "scripts": {

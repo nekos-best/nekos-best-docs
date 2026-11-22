@@ -9,7 +9,7 @@ hero:
       text: Pierwsze kroki
       link: /pl/getting-started/introduction
     - theme: alt
-      text: Punkty końcowe API
+      text: Endpointy API
       link: /pl/getting-started/api-endpoints
     - theme: alt
       text: Referencja API
@@ -23,17 +23,17 @@ hero:
     <a class="feature-card feature-card-link" href="/pl/getting-started/introduction">
       <img src="/icons/person.svg" alt="Wprowadzenie" />
       <h3>Wprowadzenie</h3>
-      <p>Kim jesteśmy i nasze najpopularniejsze funkcje.</p>
+      <p>Kim jesteśmy i jakie są nasze najpopularniejsze funkcje.</p>
     </a>
     <a class="feature-card feature-card-link" href="/pl/getting-started/api-endpoints">
-      <img src="/icons/http.svg" alt="Punkty końcowe API" />
-      <h3>Punkty końcowe API</h3>
-      <p>Wszystkie punkty końcowe, parametry, formaty odpowiedzi i przykłady danych.</p>
+      <img src="/icons/http.svg" alt="Endpointy API" />
+      <h3>Endpointy API</h3>
+      <p>Wszystkie endpointy, parametry, formaty odpowiedzi i przykłady.</p>
     </a>
     <a class="feature-card feature-card-link" href="/pl/getting-started/faq">
       <img src="/icons/question_mark.svg" alt="Często zadawane pytania" />
       <h3>Często zadawane pytania</h3>
-      <p>Odpowiedzi na najczęściej zadawane pytania.</p>
+      <p>Odpowiedzi na najczęstsze pytania.</p>
     </a>
   </div>
 
@@ -41,17 +41,17 @@ hero:
     <a class="feature-card feature-card-link" href="/legal/tos">
       <img src="/icons/gavel.svg" alt="Regulamin" />
       <h3>Regulamin</h3>
-      <p>Podstawowe zasady i warunki korzystania z naszej witryny i usług.</p>
+      <p>Podstawowe zasady i warunki korzystania z naszej strony i usług.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="Polityka prywatności" />
       <h3>Polityka prywatności</h3>
-      <p>Jak zbieramy, używamy, przechowujemy i chronimy Twoje dane osobowe.</p>
+      <p>Jak zbieramy, przetwarzamy, przechowujemy i chronimy Twoje dane osobowe.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/dmca">
       <img src="/icons/bid_landscape_disabled.svg" alt="Zgłoszenie DMCA" />
       <h3>Zgłoszenie DMCA</h3>
-      <p>Procedury zgłaszania roszczeń dotyczących naruszenia praw autorskich i usuwania treści.</p>
+      <p>Procedura zgłaszania naruszeń praw autorskich i próśb o usunięcie treści.</p>
     </a>
   </div>
   

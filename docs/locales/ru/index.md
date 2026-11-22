@@ -2,8 +2,7 @@
 layout: home
 
 hero:
-  name: "NEKOSBEST
-ДОКУМЕНТАЦИЯ API"
+  name: "NEKOSBEST\nДОКУМЕНТАЦИЯ API"
   tagline: Официальная документация для разработчиков NEKOSBEST.
   actions:
     - theme: brand
@@ -24,17 +23,17 @@ hero:
     <a class="feature-card feature-card-link" href="/ru/getting-started/introduction">
       <img src="/icons/person.svg" alt="Введение" />
       <h3>Введение</h3>
-      <p>Кто мы и наши самые популярные возможности.</p>
+      <p>О нашем проекте и его ключевых возможностях.</p>
     </a>
     <a class="feature-card feature-card-link" href="/ru/getting-started/api-endpoints">
       <img src="/icons/http.svg" alt="Эндпоинты API" />
       <h3>Эндпоинты API</h3>
-      <p>Все эндпоинты, параметры, форматы ответов и примеры вывода.</p>
+      <p>Все эндпоинты, параметры, форматы ответов и примеры.</p>
     </a>
     <a class="feature-card feature-card-link" href="/ru/getting-started/faq">
       <img src="/icons/question_mark.svg" alt="Частые вопросы" />
       <h3>Частые вопросы</h3>
-      <p>Ответы на наиболее часто задаваемые вопросы.</p>
+      <p>Ответы на самые популярные вопросы.</p>
     </a>
   </div>
 
@@ -42,7 +41,7 @@ hero:
     <a class="feature-card feature-card-link" href="/legal/tos">
       <img src="/icons/gavel.svg" alt="Условия использования" />
       <h3>Условия использования</h3>
-      <p>Основные правила и условия использования нашего сайта и сервисов.</p>
+      <p>Основные правила и условия использования сайта и сервисов.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="Политика конфиденциальности" />
@@ -52,7 +51,7 @@ hero:
     <a class="feature-card feature-card-link" href="/legal/dmca">
       <img src="/icons/bid_landscape_disabled.svg" alt="Уведомление DMCA" />
       <h3>Уведомление DMCA</h3>
-      <p>Процедура подачи жалоб на нарушение авторских прав и удаление контента.</p>
+      <p>Порядок подачи жалоб на нарушение авторских прав и запросов на удаление контента.</p>
     </a>
   </div>
   

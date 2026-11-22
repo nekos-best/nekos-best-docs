@@ -4,54 +4,57 @@ outline: [2, 3]
 
 # API 参考
 
-## 速率限制 (Rate Limits)
+## 速率限制
 
-每个响应都包含以下响应头（headers），以帮助您跟踪并遵守速率限制：
+每个响应都会包含以下响应头，方便你跟踪并遵守速率限制：
 
-| 响应头                  | 说明                                                     |
-| ----------------------- | -------------------------------------------------------- |
-| `x-rate-limit-limit`    | 当前速率限制窗口的时间跨度（例如 `1m`）                   |
-| `x-rate-limit-remaining`| 当前窗口内剩余的请求次数                                 |
-| `x-rate-limit-reset`    | 当前窗口重置的 ISO 8601 时间戳                           |
+| 响应头                   | 说明                                       |
+| ------------------------ | ------------------------------------------ |
+| `x-rate-limit-limit`     | 当前速率限制窗口的时间跨度（例如 `1m`）    |
+| `x-rate-limit-remaining` | 当前窗口内剩余的请求次数                   |
+| `x-rate-limit-reset`     | 当前窗口重置时间的 ISO 8601 时间戳         |
 
-### 限制
+### 限制额度
 
-| 端点          | 限制                                        |
-| ------------- | ------------------------------------------- |
-| `/search`     | 每 5 秒 7 次请求                            |
-| `/:category`  | 每分钟 200 次请求（每个分类）                 |
+| 端点                           | 限制                                              |
+| ------------------------------ | ------------------------------------------------- |
+| `/search`                      | 每 5 秒 7 次请求                                  |
+| `/:category`                   | 每分钟 200 次请求（按分类单独计算）               |
+| `/:category/:filename.:format` | 每分钟 200 次请求（`.png` 与 `.gif` 资源共享）    |
 
 ## User-Agent
 
-所有请求必须包含 `User-Agent` 请求头。请使用以下格式：`应用名称 (联系信息)`。\
+虽然不强制要求设置自定义 `User-Agent` 请求头，但我们建议你在请求中按以下格式设置：`APP_NAME (CONTACT_INFO)`。\
 例如：`NekoApp (https://example.com)` 或 `NekoApp (dev@example.com)`
 
-**命名指南：**
+**建议命名规范：**
 
-* **明确具体：** 请勿使用通用名称，例如 "Discord Bot"、"WhatsApp Bot" 或 "Telegram Bot"。您的应用程序必须拥有唯一的名称。
-* **避免占位符：** 请勿使用如 `test`、`bot` 或上述示例中的字符串。
-* **禁用库默认值：** 避免使用默认的库字符串，如 `python-requests`、`okhttp`、`axios`、`node` 或 `Go-http-client`。
+* **明确具体：** 使用应用的实际名称，避免使用“Discord Bot”、“WhatsApp Bot”或“Telegram Bot”这类笼统的标签。
+* **避免占位符：** 避免使用 `test`、`bot` 或直接套用上面的示例值。
+* **避免库默认值：** 建议使用自定义标识，而非 HTTP 库的默认字符串（如 `python-requests`、`okhttp`、`axios`、`node` 或 `Go-http-client`）。
 
 **联系信息选项：**\
-联系信息不必是传统网站。以下任何一种方式都是可接受的身份标识：
+联系信息不必是传统网站，以下任意一种都很合适：
 
-* 直接联系的电子邮件地址。
-* 项目网站或**公开**代码库 URL（例如 GitHub、GitLab）。
-* Bot 邀请链接或探索页面。
-* 收录列表 URL（例如 top.gg 或类似目录）。
+* 可直接联系的电子邮箱地址。
+* 项目官网或**公开**代码仓库 URL（如 GitHub、GitLab）。
+* Bot 邀请链接或发现页地址。
+* 目录收录页 URL（如 top.gg 或类似平台）。
 
-**欺骗与冒充 (Spoofing and Impersonation)：**
+**伪造与冒充：**
 
-* **请勿伪造浏览器字符串。** `Mozilla/5.0 ...` 格式严格仅保留给真实 Web 浏览器和 Cloudflare 验证的 Bot。
-* **请勿冒充已知爬虫**，如 `Googlebot` 或 `Bingbot`。
+* **请勿伪造浏览器标识。** `Mozilla/5.0 ...` 格式仅限真实浏览器和经 Cloudflare 验证的爬虫使用。
+* **请勿冒充已知爬虫**，例如 `Googlebot` 或 `Bingbot`。
 
-*未能遵守这些指南并使用通用、默认或伪造的值，极有可能导致您的请求被拦截。*
+::: info
+不设置自定义 `User-Agent` 请求头会增加被自动滥用检测系统标记或封禁（`NB-BCFSD`）的风险。
+:::
 
-## 分类 (Categories)
+## 分类
 
-分类定义了 API 返回的内容类型。每个分类都映射到固定的文件格式。
+分类用于定义 API 返回的内容类型，每个分类均对应固定的文件格式。
 
-### 图片 (Images)
+### 图片 (4)
 
 <div class="category-grid">
   <span class="category-chip">husbando</span>
@@ -60,7 +63,7 @@ outline: [2, 3]
   <span class="category-chip">waifu</span>
 </div>
 
-### GIF 动图 (GIFs)
+### GIF (59)
 
 <div class="category-grid">
   <span class="category-chip">angry</span>
@@ -124,11 +127,11 @@ outline: [2, 3]
   <span class="category-chip">yeet</span>
 </div>
 
-### 响应字段 (Response Fields)
+### 响应字段
 
-| 类型   | 字段                                        |
-| ------ | ------------------------------------------- |
-| 图片   | `artist_name`, `artist_href`, `source_url`  |
-| GIF 动图 | `anime_name`                              |
+| 类型 | 字段                                        |
+| ---- | ------------------------------------------- |
+| 图片 | `artist_name`, `artist_href`, `source_url`  |
+| GIF  | `anime_name`                                |
 
-两者均包含 `url` 和 `dimensions`。
+`url` 和 `dimensions` 字段在两种类型中均会返回。

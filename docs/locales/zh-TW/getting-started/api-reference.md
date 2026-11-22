@@ -4,54 +4,57 @@ outline: [2, 3]
 
 # API 參考
 
-## 速率限制 (Rate Limits)
+## 速率限制
 
-每個回應都包含以下標頭，以協助您追蹤並遵守速率限制：
+每個回應都會附帶以下標頭，方便你追蹤並遵守速率限制：
 
-| 標頭                    | 說明                                                     |
-| ----------------------- | -------------------------------------------------------- |
-| `x-rate-limit-limit`    | 當前速率限制時間視窗的長度（例如 `1m`）                  |
-| `x-rate-limit-remaining`| 當前時間視窗內剩餘的請求次數                             |
-| `x-rate-limit-reset`    | 當前時間視窗重設的 ISO 8601 時間戳記                     |
+| 標頭                     | 說明                                       |
+| ------------------------ | ------------------------------------------ |
+| `x-rate-limit-limit`     | 目前速率限制時間視窗的長度（例如 `1m`）    |
+| `x-rate-limit-remaining` | 目前時間視窗內剩餘的請求次數               |
+| `x-rate-limit-reset`     | 目前時間視窗重設的 ISO 8601 時間戳記       |
 
 ### 限制規則
 
-| 端點          | 限制                                        |
-| ------------- | ------------------------------------------- |
-| `/search`     | 每 5 秒 7 次請求                            |
-| `/:category`  | 每分鐘 200 次請求（每個分類）               |
+| 端點                           | 限制                                       |
+| ------------------------------ | ------------------------------------------ |
+| `/search`                      | 每 5 秒 7 次請求                           |
+| `/:category`                   | 每分鐘 200 次請求（每個分類獨立計算）      |
+| `/:category/:filename.:format` | 每分鐘 200 次請求（`.png` 與 `.gif` 資源共用） |
 
 ## User-Agent
 
-所有請求都必須包含 `User-Agent` 標頭。請使用以下格式：`APP_NAME (CONTACT_INFO)`。\
+雖然我們不強制要求設定自訂的 `User-Agent` 標頭，但仍建議你在請求中加上自訂值，格式為 `APP_NAME (CONTACT_INFO)`。\
 例如：`NekoApp (https://example.com)` 或 `NekoApp (dev@example.com)`
 
-**命名規範：**
+**建議命名原則：**
 
-* **具體明確：** 切勿使用通用名稱，如 "Discord Bot"、"WhatsApp Bot" 或 "Telegram Bot"。您的應用程式必須擁有獨特的名稱。
-* **避免占位符：** 請勿使用 `test`、`bot` 或上述範例值。
-* **禁止使用函式庫預設值：** 請勿使用預設的 HTTP 函式庫字串，如 `python-requests`、`okhttp`、`axios`、`node` 或 `Go-http-client`。
+* **具體明確：** 請使用你應用程式的實際名稱，避免使用「Discord Bot」、「WhatsApp Bot」或「Telegram Bot」等籠統名稱。
+* **避免使用預留位置：** 請避免使用 `test`、`bot` 或上述範例字串等預留值。
+* **避免使用函式庫預設值：** 建議優先使用自訂值，而非 `python-requests`、`okhttp`、`axios`、`node` 或 `Go-http-client` 等函式庫預設字串。
 
 **聯絡資訊選項：**\
-聯絡資訊不必是傳統網站。以下任何一種方式都是可接受的識別提供方式：
+聯絡資訊不一定要是傳統網站，以下任一種方式都適用：
 
-* 直接聯絡的電子郵件地址。
-* 專案網站或**公開**的儲存庫 URL（例如 GitHub、GitLab）。
-* Bot 邀請連結或探索頁面。
-* 列表頁面 URL（例如 top.gg 或類似目錄）。
+* 可直接聯繫的電子郵件位址。
+* 專案網站或**公開**的程式碼儲存庫 URL（例如 GitHub、GitLab）。
+* Bot 邀請連結或探索頁面（discovery page）。
+* 清單或目錄頁面 URL（例如 top.gg 等平台）。
 
-**偽造與冒充限制：**
+**偽造與冒充：**
 
-* **請勿偽造瀏覽器字串。** `Mozilla/5.0 ...` 格式嚴格保留給真實網頁瀏覽器與經 Cloudflare 驗證的 Bot。
-* **請勿冒充已知爬蟲**，如 `Googlebot` 或 `Bingbot`。
+* **請勿偽造瀏覽器字串。** `Mozilla/5.0 ...` 格式僅限真實網頁瀏覽器與經 Cloudflare 驗證的 Bot 使用。
+* **請勿冒充已知爬蟲**，例如 `Googlebot` 或 `Bingbot`。
 
-*若未遵守這些規範並使用通用、預設或偽造的值，您的請求將很有可能被系統封鎖。*
+::: info
+未設定自訂 `User-Agent` 標頭的請求，較容易被我們的自動濫用偵測系統標記或封鎖（`NB-BCFSD`）。
+:::
 
 ## 分類
 
-分類定義了 API 傳回的內容類型。每個分類皆對應固定的檔案格式。
+分類決定了 API 回傳的內容類型，每個分類都對應固定的檔案格式。
 
-### 圖片 (Images)
+### 圖片 (4)
 
 <div class="category-grid">
   <span class="category-chip">husbando</span>
@@ -60,7 +63,7 @@ outline: [2, 3]
   <span class="category-chip">waifu</span>
 </div>
 
-### GIF
+### GIF (59)
 
 <div class="category-grid">
   <span class="category-chip">angry</span>
@@ -126,9 +129,9 @@ outline: [2, 3]
 
 ### 回應欄位
 
-| 類型   | 欄位                                        |
-| ------ | ------------------------------------------- |
-| 圖片   | `artist_name`, `artist_href`, `source_url`  |
-| GIF    | `anime_name`                                |
+| 類型 | 欄位                                       |
+| ---- | ------------------------------------------ |
+| 圖片 | `artist_name`, `artist_href`, `source_url` |
+| GIF  | `anime_name`                               |
 
-`url` 與 `dimensions` 包含在兩種類型中。
+兩種類型的回應皆包含 `url` 與 `dimensions`。

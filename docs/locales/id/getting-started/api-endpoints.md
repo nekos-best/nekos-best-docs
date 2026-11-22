@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # Endpoint API
 
-## URL Dasar
+## Base URL
 
 ```
 https://nekos.best/api/:version
@@ -22,19 +22,19 @@ Ganti `:version` dengan salah satu versi yang didukung di bawah ini.
 
   <div class="versions-row">
     <div class="version-col"><span class="version-chip current">v2</span></div>
-    <div class="version-col">Saat Ini & Dipelihara</div>
+    <div class="version-col">Versi Terbaru & Aktif Dipelihara</div>
   </div>
 </div>
 
-::: warning Penting
-Sebelum membuat permintaan, silakan baca [dokumentasi User-Agent](/id/getting-started/api-reference.html#user-agent). Semua permintaan harus menyertakan header `User-Agent` dengan format yang benar.
+::: tip
+Kami menyarankan untuk mengatur header `User-Agent` kustom saat mengirim request. Lihat [dokumentasi User-Agent](/id/getting-started/api-reference.html#user-agent) untuk format yang direkomendasikan.
 :::
 
 ## Endpoint
 
 ### <Badge type="tip" text="GET" class="http-get" /> /endpoints
 
-Mengembalikan semua kategori API yang tersedia beserta format berkas yang terkait.
+Mengembalikan semua kategori API yang tersedia beserta format file masing-masing.
 
 #### Contoh
 
@@ -48,22 +48,22 @@ https://nekos.best/api/v2/endpoints
 ```
 
 ::: tip
-Gunakan endpoint ini untuk menemukan kategori yang didukung secara dinamis daripada menuliskannya secara hardcode.
+Gunakan endpoint ini untuk mengambil daftar kategori yang didukung secara dinamis, daripada menuliskannya secara manual (hardcode) di kodemu.
 :::
 
 ---
 
 ### <Badge type="tip" text="GET" class="http-get" /> /:category
 
-Mengembalikan gambar atau GIF acak dari kategori yang ditentukan, termasuk metadatanya.
+Mengembalikan gambar atau GIF acak dari kategori yang ditentukan, lengkap dengan metadatanya.
 
 #### Parameter Query
 
-| Nama   | Tipe   | Wajib | Deskripsi                                 |
-| ------ | ------ | ----- | ----------------------------------------- |
+| Nama   | Tipe   | Wajib | Deskripsi                                   |
+| ------ | ------ | ----- | ------------------------------------------- |
 | amount | number | Tidak | Jumlah hasil yang dikembalikan (`1 ≤ X ≤ 20`) |
 
-Default ke `1` jika tidak ditentukan.
+Jika tidak ditentukan, nilai default-nya adalah `1`.
 
 #### Contoh (hasil tunggal)
 
@@ -117,16 +117,16 @@ https://nekos.best/api/v2/hug?amount=2
 
 ### <Badge type="tip" text="GET" class="http-get" /> /search
 
-Cari gambar atau GIF menggunakan metadata seperti nama seniman atau judul sumber.
+Mencari gambar atau GIF berdasarkan metadata seperti nama ilustrator atau judul anime sumbernya.
 
 #### Parameter Query
 
-| Nama     | Tipe   | Wajib | Deskripsi                           |
-| -------- | ------ | ----- | ----------------------------------- |
-| query    | string | Ya    | Kata kunci pencarian                |
-| type     | enum   | Ya    | `1` = gambar, `2` = GIF             |
-| category | string | Tidak | Batasi hasil pada satu kategori     |
-| amount   | number | Tidak | Jumlah hasil (`1 ≤ X ≤ 20`)         |
+| Nama     | Tipe   | Wajib | Deskripsi                              |
+| -------- | ------ | ----- | -------------------------------------- |
+| query    | string | Ya    | Kata kunci pencarian                   |
+| type     | enum   | Ya    | `1` = gambar, `2` = GIF                |
+| category | string | Tidak | Batasi hasil ke kategori tertentu      |
+| amount   | number | Tidak | Jumlah hasil (`1 ≤ X ≤ 20`)            |
 
 #### Contoh (pencarian gambar)
 
@@ -180,18 +180,18 @@ https://nekos.best/api/v2/search?query=Generic&type=2&category=pat&amount=2
 
 ### <Badge type="tip" text="GET" class="http-get" /> /:category/:filename.:format
 
-Mengambil aset tertentu secara langsung.
+Mengambil file aset tertentu secara langsung.
 
-#### Parameter Jalur (Path)
+#### Parameter Path
 
-| Nama     | Deskripsi                   |
-| -------- | --------------------------- |
-| category | Nama kategori               |
-| filename | Nama berkas aset (UUID)     |
-| format   | Format berkas (`png`, `gif`)|
+| Nama     | Deskripsi                  |
+| -------- | -------------------------- |
+| category | Nama kategori              |
+| filename | Nama file aset (UUID)      |
+| format   | Format file (`png`, `gif`) |
 
 ::: info
-Metadata untuk endpoint ini dikembalikan melalui **header respons HTTP yang terenkode URL**.
+Metadata untuk endpoint ini dikembalikan melalui **header respons HTTP yang di-encode dengan URL**.
 :::
 
 **Header yang tersedia:**

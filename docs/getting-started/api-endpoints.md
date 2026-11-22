@@ -26,8 +26,8 @@ Replace `:version` with one of the supported versions below.
   </div>
 </div>
 
-::: warning Important
-Before making any requests, please read the [User-Agent documentation](/getting-started/api-reference.html#user-agent). All requests must include a properly formatted `User-Agent` header.
+::: tip
+We recommend setting a custom `User-Agent` header when making requests. See the [User-Agent documentation](/getting-started/api-reference.html#user-agent) for suggested formatting.
 :::
 
 ## Endpoints

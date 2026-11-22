@@ -16,24 +16,25 @@ Every response includes the following headers to help you track and respect rate
 
 ### Limits
 
-| Endpoint      | Limit                                       |
-| ------------- | ------------------------------------------- |
-| `/search`     | 7 requests per 5 seconds                    |
-| `/:category`  | 200 requests per minute (per category)      |
+| Endpoint                       | Limit                                                          |
+| ------------------------------ | -------------------------------------------------------------- |
+| `/search`                      | 7 requests per 5 seconds                                       |
+| `/:category`                   | 200 requests per minute (per category)                         |
+| `/:category/:filename.:format` | 200 requests per minute (shared across `.png` & `.gif` assets) |
 
 ## User-Agent
 
-All requests must include a `User-Agent` header. Please use the following format: `APP_NAME (CONTACT_INFO)`.\
+While a custom `User-Agent` header is not required, we recommend setting one on your requests using the following format: `APP_NAME (CONTACT_INFO)`.\
 For example: `NekoApp (https://example.com)` or `NekoApp (dev@example.com)`
 
-**Naming Guidelines:**
+**Suggested Naming Guidelines:**
 
-* **Be specific:** Do not use generic names like "Discord Bot", "WhatsApp Bot", or "Telegram Bot". Your application must have a unique name.
-* **Avoid placeholders:** Do not use strings like `test`, `bot`, or the example value above.
-* **No library defaults:** Avoid using default library strings such as `python-requests`, `okhttp`, `axios`, `node`, or `Go-http-client`.
+* **Be specific:** Use your application's actual name rather than generic labels like "Discord Bot", "WhatsApp Bot", or "Telegram Bot".
+* **Avoid placeholders:** Avoid placeholder strings like `test`, `bot`, or the example values above.
+* **Avoid library defaults:** Prefer a custom value over default library strings such as `python-requests`, `okhttp`, `axios`, `node`, or `Go-http-client`.
 
 **Contact Information Options:**\
-The contact info does not have to be a traditional website. Any of the following are acceptable ways to provide identification:
+The contact info does not have to be a traditional website. Any of the following work well:
 
 * A direct contact email address.
 * A project website or **public** repository URL (e.g., GitHub, GitLab).
@@ -42,16 +43,18 @@ The contact info does not have to be a traditional website. Any of the following
 
 **Spoofing and Impersonation:**
 
-* **Do not spoof browser strings.** The `Mozilla/5.0 ...` format is strictly reserved for real web browsers and Cloudflare-verified bots.
+* **Do not spoof browser strings.** The `Mozilla/5.0 ...` format is reserved for real web browsers and Cloudflare-verified bots.
 * **Do not impersonate known crawlers** like `Googlebot` or `Bingbot`.
 
-*Failure to follow these guidelines and using generic, default, or spoofed values will likely result in your requests being blocked.*
+::: info
+Not setting a custom `User-Agent` header carries a higher chance of being flagged or banned by our automated abuse detection (`NB-BCFSD`).
+:::
 
 ## Categories
 
 Categories define the type of content returned by the API. Each category maps to a fixed file format.
 
-### Images
+### Images (4)
 
 <div class="category-grid">
   <span class="category-chip">husbando</span>
@@ -60,7 +63,7 @@ Categories define the type of content returned by the API. Each category maps to
   <span class="category-chip">waifu</span>
 </div>
 
-### GIFs
+### GIFs (59)
 
 <div class="category-grid">
   <span class="category-chip">angry</span>

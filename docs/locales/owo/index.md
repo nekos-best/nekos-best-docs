@@ -39,9 +39,9 @@ hero:
 
   <div class="feature-grid home-grid-3">
     <a class="feature-card feature-card-link" href="/legal/tos">
-      <img src="/icons/gavel.svg" alt="Tewms and Conditions" />
-      <h3>Tewms and Conditions >w<</h3>
-      <p>The basic wuwes and tewms for using ouw website and sewvices nya~.</p>
+      <img src="/icons/gavel.svg" alt="Tewms of Sewvice" />
+      <h3>Tewms of Sewvice >w<</h3>
+      <p>The basic wuwes and tewms fow using ouw website and sewvices nya~.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="Pwivacy Powicy" />
@@ -51,7 +51,7 @@ hero:
     <a class="feature-card feature-card-link" href="/legal/dmca">
       <img src="/icons/bid_landscape_disabled.svg" alt="DMCA Takedown" />
       <h3>DMCA Takedown UwU</h3>
-      <p>Pwoceduwes fow submittaw of copywight infwingement cwaims and content wemovaw wequests nya~.</p>
+      <p>Pwoceduwes fow submitting copywight infwingement cwaims and content wemovaw wequests nya~.</p>
     </a>
   </div>
   

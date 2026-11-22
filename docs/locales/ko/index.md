@@ -2,9 +2,8 @@
 layout: home
 
 hero:
-  name: "NEKOSBEST
-API DOCUMENTATION"
-  tagline: NekosBest 공식 개발자 문서.
+  name: "NEKOSBEST\nAPI 문서"
+  tagline: NEKOSBEST 공식 개발자 문서입니다.
   actions:
     - theme: brand
       text: 시작하기
@@ -24,17 +23,17 @@ API DOCUMENTATION"
     <a class="feature-card feature-card-link" href="/ko/getting-started/introduction">
       <img src="/icons/person.svg" alt="소개" />
       <h3>소개</h3>
-      <p>우리가 누구인지와 가장 인기 있는 기능들.</p>
+      <p>NEKOSBEST 소개와 주요 기능을 확인하세요.</p>
     </a>
     <a class="feature-card feature-card-link" href="/ko/getting-started/api-endpoints">
       <img src="/icons/http.svg" alt="API 엔드포인트" />
       <h3>API 엔드포인트</h3>
-      <p>모든 엔드포인트, 매개변수, 응답 형식 및 예제.</p>
+      <p>모든 엔드포인트, 파라미터, 응답 형식과 출력 예시를 제공합니다.</p>
     </a>
     <a class="feature-card feature-card-link" href="/ko/getting-started/faq">
       <img src="/icons/question_mark.svg" alt="자주 묻는 질문" />
       <h3>자주 묻는 질문</h3>
-      <p>가장 자주 묻는 질문 모음.</p>
+      <p>개발자들이 가장 자주 묻는 질문과 답변을 모았습니다.</p>
     </a>
   </div>
 
@@ -42,17 +41,17 @@ API DOCUMENTATION"
     <a class="feature-card feature-card-link" href="/legal/tos">
       <img src="/icons/gavel.svg" alt="이용약관" />
       <h3>이용약관</h3>
-      <p>사이트 및 서비스 이용을 위한 기본 규칙.</p>
+      <p>웹사이트 및 서비스 이용을 위한 기본 규칙과 약관입니다.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="개인정보 처리방침" />
       <h3>개인정보 처리방침</h3>
-      <p>개인정보 수집, 이용 및 보호 방법.</p>
+      <p>개인정보의 수집, 이용, 보관 및 보호 정책을 안내합니다.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/dmca">
       <img src="/icons/bid_landscape_disabled.svg" alt="DMCA 게시 중단" />
       <h3>DMCA 게시 중단</h3>
-      <p>저작권 침해 신고 및 콘텐츠 삭제 절차.</p>
+      <p>저작권 침해 신고 및 콘텐츠 삭제 요청 절차를 안내합니다.</p>
     </a>
   </div>
   

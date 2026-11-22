@@ -10,7 +10,7 @@ outline: [2, 3]
 https://nekos.best/api/:version
 ```
 
-Ersetzen Sie `:version` durch eine der unten unterstützten Versionen.
+Ersetze `:version` durch eine der unten aufgeführten unterstützten Versionen.
 
 ## Versionen
 
@@ -22,19 +22,19 @@ Ersetzen Sie `:version` durch eine der unten unterstützten Versionen.
 
   <div class="versions-row">
     <div class="version-col"><span class="version-chip current">v2</span></div>
-    <div class="version-col">Aktuell & Gewartet</div>
+    <div class="version-col">Aktuell & aktiv gewartet</div>
   </div>
 </div>
 
-::: warning Wichtig
-Bevor Sie Anfragen stellen, lesen Sie bitte die [User-Agent-Dokumentation](/de/getting-started/api-reference.html#user-agent). Alle Anfragen müssen einen ordnungsgemäß formatierten `User-Agent`-Header enthalten.
+::: tip
+Wir empfehlen, bei deinen Anfragen einen eigenen `User-Agent`-Header zu setzen. In der [User-Agent-Dokumentation](/de/getting-started/api-reference.html#user-agent) findest du das empfohlene Format.
 :::
 
 ## Endpunkte
 
 ### <Badge type="tip" text="GET" class="http-get" /> /endpoints
 
-Gibt alle verfügbaren API-Kategorien und deren zugehörige Dateiformate zurück.
+Gibt alle verfügbaren API-Kategorien und die zugehörigen Dateiformate zurück.
 
 #### Beispiel
 
@@ -48,7 +48,7 @@ https://nekos.best/api/v2/endpoints
 ```
 
 ::: tip
-Verwenden Sie diesen Endpunkt, um unterstützte Kategorien dynamisch zu ermitteln, anstatt sie fest im Code zu hinterlegen.
+Nutze diesen Endpunkt, um unterstützte Kategorien dynamisch abzufragen, statt sie fest im Code zu hinterlegen.
 :::
 
 ---
@@ -57,13 +57,13 @@ Verwenden Sie diesen Endpunkt, um unterstützte Kategorien dynamisch zu ermittel
 
 Gibt ein zufälliges Bild oder GIF aus der angegebenen Kategorie inklusive Metadaten zurück.
 
-#### Abfrageparameter (Query Parameters)
+#### Query-Parameter
 
-| Name   | Typ    | Erforderlich | Beschreibung                                     |
-| ------ | ------ | ------------ | ------------------------------------------------ |
-| amount | number | Nein         | Anzahl der zurückzugebenden Ergebnisse (`1 ≤ X ≤ 20`) |
+| Name   | Typ    | Erforderlich | Beschreibung                             |
+| ------ | ------ | ------------ | ---------------------------------------- |
+| amount | number | Nein         | Anzahl der Ergebnisse (`1 ≤ X ≤ 20`)     |
 
-Standardmäßig `1`, falls nicht angegeben.
+Standardwert ist `1`, wenn nichts angegeben wird.
 
 #### Beispiel (einzelnes Ergebnis)
 
@@ -117,16 +117,16 @@ https://nekos.best/api/v2/hug?amount=2
 
 ### <Badge type="tip" text="GET" class="http-get" /> /search
 
-Suchen Sie nach Bildern oder GIFs anhand von Metadaten wie Künstlernamen oder Quellentiteln.
+Durchsucht Bilder oder GIFs anhand von Metadaten wie Künstlernamen oder Quellentiteln.
 
-#### Abfrageparameter (Query Parameters)
+#### Query-Parameter
 
-| Name     | Typ    | Erforderlich | Beschreibung                                      |
-| -------- | ------ | ------------ | ------------------------------------------------- |
-| query    | string | Ja           | Suchbegriff                                       |
-| type     | enum   | Ja           | `1` = Bilder, `2` = GIFs                          |
-| category | string | Nein         | Ergebnisse auf eine Kategorie beschränken         |
-| amount   | number | Nein         | Anzahl der Ergebnisse (`1 ≤ X ≤ 20`)              |
+| Name     | Typ    | Erforderlich | Beschreibung                                     |
+| -------- | ------ | ------------ | ------------------------------------------------ |
+| query    | string | Ja           | Suchbegriff                                      |
+| type     | enum   | Ja           | `1` = Bilder, `2` = GIFs                         |
+| category | string | Nein         | Ergebnisse auf eine Kategorie beschränken        |
+| amount   | number | Nein         | Anzahl der Ergebnisse (`1 ≤ X ≤ 20`)             |
 
 #### Beispiel (Bildsuche)
 
@@ -180,15 +180,15 @@ https://nekos.best/api/v2/search?query=Generic&type=2&category=pat&amount=2
 
 ### <Badge type="tip" text="GET" class="http-get" /> /:category/:filename.:format
 
-Ruft eine bestimmte Datei direkt ab.
+Ruft ein bestimmtes Asset direkt ab.
 
 #### Pfadparameter
 
-| Name     | Beschreibung               |
-| -------- | -------------------------- |
-| category | Kategoriename              |
-| filename | Dateiname des Assets (UUID)|
-| format   | Dateiformat (`png`, `gif`) |
+| Name     | Beschreibung                |
+| -------- | --------------------------- |
+| category | Kategoriename               |
+| filename | Dateiname des Assets (UUID) |
+| format   | Dateiformat (`png`, `gif`)  |
 
 ::: info
 Metadaten für diesen Endpunkt werden über **URL-kodierte HTTP-Antwort-Header** zurückgegeben.

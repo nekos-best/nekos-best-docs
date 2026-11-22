@@ -1,57 +1,73 @@
 ---
 outline: [2]
 ---
-# Foire Aux Questions (FAQ)
+# Foire aux questions (FAQ)
 
-Vous trouverez ci-dessous quelques-unes des questions les plus fréquemment posées.
+Vous trouverez ci-dessous les réponses aux questions les plus fréquemment posées.
 
 ## Général
 
-#### Où le serveur est-il situé ?
+#### Où est hébergé le serveur ?
 > Le serveur est hébergé en Allemagne.
 
 #### Quelle est la fiabilité de l'API ?
-> Notre API maintient actuellement une disponibilité (uptime) d'**au moins** 99,99 % par an.
+> Notre API maintient actuellement une disponibilité d'**au moins** 99,99 % par an.
 
 #### L'attribution est-elle obligatoire pour utiliser l'API ?
-> Non, l'attribution n'est pas obligatoire, mais elle est appréciée.
+> Non, elle n'est pas obligatoire, mais nous l'apprécions beaucoup.
 
-## Images et GIFs
+## Images & GIFs
 
-#### À quel point les images et GIFs sont-ils sûrs ?
-> Nous donnons la priorité au contenu totalement adapté au travail (SFW). Contrairement à de nombreuses autres API d'animé, vous ne trouverez aucun personnage dans des tenues à caractère suggestif (par exemple, maillots de bain, bikinis, sous-vêtements, vêtements transparents ou tenues trop dénudées).\
-> De plus, nous excluons les contenus tels que les panty shots (où les sous-vêtements sont intentionnellement visibles), le « bait » axé sur les aisselles et autres contenus similaires orientés fétichisme.\
-> Chaque image et GIF est soigneusement sélectionné pour garantir un contenu sûr et de haute qualité plutôt qu'une simple quantité.
+#### Les images et les GIFs sont-ils vraiment SFW ?
+> Nous privilégions un contenu intégralement tout public (SFW). Contrairement à de nombreuses autres API d'anime, vous ne trouverez pas de personnages en tenues suggestives (maillots de bain, bikinis, sous-vêtements, vêtements transparents ou trop dénudés).\
+> Nous excluons également les contenus tels que les panty shots (où les sous-vêtements sont volontairement visibles), le « bait » axé sur les aisselles et tout contenu similaire à caractère fétichiste.\
+> Chaque image et chaque GIF est sélectionné avec soin pour privilégier la qualité et la sécurité plutôt que la quantité.
 
-#### Puis-je utiliser les images ou GIFs à des fins commerciales ?
+#### Puis-je utiliser les images ou les GIFs à des fins commerciales ?
 > Non. L'utilisation commerciale est interdite conformément à nos [Conditions d'utilisation](/legal/tos).\
-> Les images ne nous appartiennent pas et sont partagées uniquement à des fins de divertissement, avec les crédits appropriés accordés aux créateurs originaux.
+> Les images ne nous appartiennent pas et sont partagées uniquement à des fins de divertissement, avec les crédits dus aux créateurs originaux.
 
-#### Suis-je obligé d'inclure les crédits des artistes ?
-> Bien que vous ne soyez pas tenu d'inclure les crédits des artistes, nous vous recommandons vivement de le faire, car l'API fournit déjà cette information.
+#### Suis-je obligé d'afficher les crédits des artistes ?
+> Ce n'est pas obligatoire, mais nous vous le recommandons vivement, d'autant plus que l'API fournit déjà ces informations.
 
-#### Une image ou un GIF a une source incorrecte ou manquante. Où puis-je signaler cela ?
-> Si vous remarquez une source incorrecte ou manquante dans l'API, veuillez le signaler sur notre serveur Discord. Allez dans le canal `#api-support` et créez une nouvelle publication.
+#### La source d'une image ou d'un GIF est incorrecte ou manquante. Où le signaler ?
+> Si vous remarquez une source erronée ou manquante dans l'API, signalez-le sur notre serveur Discord en créant un post dans le salon `#api-support`.
 
 #### Pouvez-vous ajouter X à l'API ?
-> Les suggestions de catégories doivent être soumises via notre serveur Discord, où nous avons un canal dédié `#suggestions`.
+> Les suggestions de catégories se font sur notre serveur Discord, dans le salon dédié `#suggestions`.
 >
-> **Remarque :** Seules les suggestions de catégories adaptées à tout public (SFW) seront acceptées. Les suggestions contenant des éléments tels que « lécher » ou « enlever » ne respectent pas nos directives SFW et seront refusées.
+> **Remarque :** Seules les suggestions de catégories SFW sont acceptées. Les propositions impliquant des thèmes comme « lick » ou « kidnap » ne respectent pas nos règles SFW et seront refusées.
 
-#### Quand de nouvelles images, GIFs ou catégories seront-ils publiés ?
-> Il n'y a pas de calendrier de publication fixe ni d'estimation de temps (ETA). Tout le contenu est ajouté manuellement et les mises à jour ont lieu lorsqu'elles sont prêtes et que les propriétaires ont le temps disponible pour y travailler.
+#### Quand de nouvelles images, GIFs ou catégories seront-ils ajoutés ?
+> Il n'y a pas de calendrier fixe ni d'estimation (ETA). Tous les contenus sont ajoutés manuellement : les mises à jour sont publiées lorsqu'elles sont prêtes et selon la disponibilité de l'équipe.
 
-#### Puis-je contribuer en envoyant des images ou GIFs à l'API ?
-> Absolument. Si vous souhaitez contribuer, rejoignez notre serveur Discord et créez une publication dans `#api-support`.\
-> Les contributeurs reçoivent un rôle spécial de Contributeur dans notre communauté Discord.
+#### Puis-je contribuer avec mes propres images ou GIFs ?
+> Bien sûr ! Si vous souhaitez contribuer, rejoignez notre serveur Discord et créez un post dans `#api-support`.
+> Les contributeurs reçoivent un rôle spécial de Contributeur sur notre serveur Discord.
 
-#### Y a-t-il des images ou GIFs générés par IA dans l'API ?
-> Non. Toutes les images et GIFs de l'API ont été créés par des artistes humains. Nous ne soutenons pas le contenu généré par IA.
+#### L'API contient-elle des images ou des GIFs générés par IA ?
+> Non. Toutes les images et tous les GIFs de l'API sont créés par des artistes humains. Nous ne prenons pas en charge le contenu généré par IA.
 
-## Débogage
+#### Puis-je utiliser les images ou les GIFs pour entraîner une IA, un modèle de ML ou un LLM ?
+> **Non.** Comme indiqué dans nos [Conditions d'utilisation](/legal/tos), l'utilisation du contenu de l'API pour entraîner des modèles d'IA, de machine learning ou des LLM (y compris le scraping ou la constitution de jeux de données) est strictement interdite et entraîne un bannissement de l'API. Aucune autorisation ne peut être accordée, car nous ne sommes pas propriétaires de ces contenus.
 
-#### Pourquoi ai-je le code ERR-C "NB-BXIUA" ?
-> Bien que les en-têtes `User-Agent` vides soient bloqués depuis août 2024, de nouvelles directives de formatage ont été introduites en juin 2026. Assurez-vous de suivre le format requis, car l'utilisation de valeurs par défaut de bibliothèques ou d'un mauvais format peut entraîner le rejet automatique de vos requêtes. Veuillez lire notre [documentation User-Agent](/fr/getting-started/api-reference.html#user-agent) pour vous assurer que votre configuration est correcte.
+#### Puis-je mettre en cache, télécharger ou scraper les images ou les GIFs ?
+> La mise en cache des **réponses JSON de l'API** (comme les métadonnées et les URL) est autorisée pour un **usage privé** uniquement, à condition qu'elles ne soient ni rendues publiques ni redistribuées.\
+> La mise en cache, le téléchargement, le scraping, le réhébergement ou l'extraction en masse des **fichiers image ou GIF eux-mêmes** sont **strictement interdits** conformément à nos [Conditions d'utilisation](/legal/tos) et entraînent un bannissement de l'API.
 
-#### J'utilise un VPN ou un proxy, mais je ne peux plus passer de requêtes.
-> Les VPN et proxies sont autorisés, mais comportent des limitations importantes. Leurs adresses IP sont partagées par de nombreux utilisateurs, ce qui signifie qu'un seul utilisateur malveillant peut faire bannir une IP et impacter tous les autres utilisateurs. Les IP VPN/proxy bannies sont bloquées de manière permanente et sans exception, étant signalées beaucoup plus fréquemment que les IP régulières. Si vous dépendez d'un VPN/proxy et perdez l'accès, nous ne pouvons malheureusement rien y faire.
+#### Quelle est la taille des GIFs ?
+> Nos GIFs sont légers et optimisés pour un chargement rapide, avec une taille moyenne d'environ **~900 Ko** par fichier.
+
+## Débogage / Erreurs
+
+#### Pourquoi est-ce que je reçois le code ERR-C "NB-BXIUA" ?
+> Les en-têtes `User-Agent` vides ou falsifiés sont bloqués. Assurez-vous que vos requêtes incluent un en-tête `User-Agent` valide et évitez d'imiter des chaînes de navigateur ou de vous faire passer pour des robots d'exploration connus. Consultez notre [documentation User-Agent](/fr/getting-started/api-reference.html#user-agent) pour connaître le format recommandé.
+
+#### Pourquoi est-ce que je reçois le code ERR-C "NB-BCFSD" ?
+> `NB-BCFSD` signifie que vous avez été banni de l'API par notre système automatique de détection des abus. Si vous pensez qu'il s'agit d'une erreur, contactez-nous sur notre [serveur Discord](https://nekos.best/discord) ou par e-mail à **[contact@nekos.best](mailto:contact@nekos.best)**.
+
+#### Pourquoi est-ce que je reçois le code ERR-C "NB-BXASN" ?
+> `NB-BXASN` signifie que votre ASN (Autonomous System Number) est banni de notre système. Pour effectuer des requêtes, votre adresse IP devra être ajoutée à la liste blanche. Contactez-nous sur notre [serveur Discord](https://nekos.best/discord) ou par e-mail à **[contact@nekos.best](mailto:contact@nekos.best)**.
+
+#### J'utilise un VPN ou un proxy, mais je ne peux plus effectuer de requêtes.
+> Les VPN et proxys sont autorisés, mais comportent des limites importantes. Leurs adresses IP étant partagées entre de nombreux utilisateurs, il suffit d'un seul abus pour qu'une IP soit bannie, ce qui affecte toutes les autres personnes qui l'utilisent. Les IP de VPN/proxy bannies sont bloquées définitivement, sans exception, et sont signalées beaucoup plus souvent que les IP classiques. Si vous utilisez un VPN ou un proxy et perdez l'accès, nous ne pouvons malheureusement rien y faire.

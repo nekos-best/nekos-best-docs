@@ -4,54 +4,57 @@ outline: [2, 3]
 
 # Referensi API
 
-## Batasan Laju (Rate Limits)
+## Rate Limit
 
-Setiap respons menyertakan header berikut untuk membantu Anda memantau dan mematuhi batasan laju:
+Setiap respons menyertakan header berikut agar kamu dapat memantau dan mematuhi rate limit dengan mudah:
 
-| Header                  | Deskripsi                                                |
-| ----------------------- | -------------------------------------------------------- |
-| `x-rate-limit-limit`    | Durasi jendela batas laju saat ini (mis. `1m`)           |
-| `x-rate-limit-remaining`| Sisa permintaan dalam jendela saat ini                   |
-| `x-rate-limit-reset`    | Stempel waktu ISO 8601 saat jendela saat ini diatur ulang |
+| Header                   | Deskripsi                                                  |
+| ------------------------ | ---------------------------------------------------------- |
+| `x-rate-limit-limit`     | Durasi jendela rate limit saat ini (mis. `1m`)             |
+| `x-rate-limit-remaining` | Sisa request yang tersedia dalam jendela saat ini          |
+| `x-rate-limit-reset`     | Timestamp ISO 8601 saat jendela rate limit saat ini direset |
 
-### Batasan
+### Batas Rate Limit
 
-| Endpoint      | Batas                                       |
-| ------------- | ------------------------------------------- |
-| `/search`     | 7 permintaan per 5 detik                    |
-| `/:category`  | 200 permintaan per menit (per kategori)     |
+| Endpoint                       | Batas                                                         |
+| ------------------------------ | ------------------------------------------------------------- |
+| `/search`                      | 7 request per 5 detik                                         |
+| `/:category`                   | 200 request per menit (per kategori)                          |
+| `/:category/:filename.:format` | 200 request per menit (berbagi kuota untuk aset `.png` & `.gif`) |
 
 ## User-Agent
 
-Semua permintaan harus menyertakan header `User-Agent`. Silakan gunakan format berikut: `NAMA_APLIKASI (INFO_KONTAK)`.\
+Meskipun header `User-Agent` kustom tidak diwajibkan, kami sangat menyarankan untuk mengaturnya pada setiap request dengan format: `APP_NAME (CONTACT_INFO)`.\
 Contoh: `NekoApp (https://example.com)` atau `NekoApp (dev@example.com)`
 
-**Panduan Penamaan:**
+**Saran Penamaan:**
 
-* **Spesifik:** Jangan gunakan nama umum seperti "Discord Bot", "WhatsApp Bot", atau "Telegram Bot". Aplikasi Anda harus memiliki nama yang unik.
-* **Hindari tempat penampung (placeholders):** Jangan gunakan string seperti `test`, `bot`, atau nilai contoh di atas.
-* **Bukan default pustaka:** Hindari menggunakan string default pustaka seperti `python-requests`, `okhttp`, `axios`, `node`, atau `Go-http-client`.
+* **Gunakan nama spesifik:** Pakai nama asli aplikasimu, bukan label umum seperti "Discord Bot", "WhatsApp Bot", atau "Telegram Bot".
+* **Hindari placeholder:** Hindari string placeholder seperti `test`, `bot`, atau contoh nilai di atas.
+* **Hindari default library:** Sebaiknya gunakan nilai kustom alih-alih string bawaan library seperti `python-requests`, `okhttp`, `axios`, `node`, atau `Go-http-client`.
 
 **Pilihan Informasi Kontak:**\
-Informasi kontak tidak harus berupa situs web tradisional. Salah satu dari cara berikut dapat diterima sebagai identifikasi:
+Informasi kontak tidak harus berupa situs web biasa. Salah satu opsi berikut sudah cukup:
 
 * Alamat email kontak langsung.
 * Situs web proyek atau URL repositori **publik** (misalnya GitHub, GitLab).
-* Tautan undangan bot atau halaman penemuan (discovery page).
-* URL pendaftaran (misalnya top.gg atau direktori serupa).
+* Tautan undangan bot atau halaman discovery.
+* URL direktori bot (misalnya top.gg atau platform sejenis).
 
 **Spoofing dan Penyamaran:**
 
-* **Jangan memalsukan string peramban.** Format `Mozilla/5.0 ...` khusus diperuntukkan bagi peramban web asli dan bot yang diverifikasi Cloudflare.
+* **Jangan memalsukan string browser.** Format `Mozilla/5.0 ...` hanya diperuntukkan bagi browser web asli dan bot yang terverifikasi Cloudflare.
 * **Jangan menyamar sebagai crawler terkenal** seperti `Googlebot` atau `Bingbot`.
 
-*Kegagalan mengikuti panduan ini dan penggunaan nilai umum, default, atau palsu kemungkinan besar akan mengakibatkan permintaan Anda diblokir.*
+::: info
+Tidak mengatur header `User-Agent` kustom meningkatkan risiko ditandai atau diblokir oleh sistem deteksi penyalahgunaan otomatis kami (`NB-BCFSD`).
+:::
 
 ## Kategori
 
-Kategori menentukan jenis konten yang dikembalikan oleh API. Setiap kategori dipetakan ke format berkas tetap.
+Kategori menentukan jenis konten yang dikembalikan oleh API. Setiap kategori memiliki format file yang tetap.
 
-### Gambar
+### Gambar (4)
 
 <div class="category-grid">
   <span class="category-chip">husbando</span>
@@ -60,7 +63,7 @@ Kategori menentukan jenis konten yang dikembalikan oleh API. Setiap kategori dip
   <span class="category-chip">waifu</span>
 </div>
 
-### GIF
+### GIF (59)
 
 <div class="category-grid">
   <span class="category-chip">angry</span>
@@ -124,11 +127,11 @@ Kategori menentukan jenis konten yang dikembalikan oleh API. Setiap kategori dip
   <span class="category-chip">yeet</span>
 </div>
 
-### Bidang Respons (Response Fields)
+### Field Respons
 
-| Tipe   | Bidang                                      |
-| ------ | ------------------------------------------- |
-| Gambar | `artist_name`, `artist_href`, `source_url`  |
-| GIF    | `anime_name`                                |
+| Tipe   | Field                                      |
+| ------ | ------------------------------------------ |
+| Gambar | `artist_name`, `artist_href`, `source_url` |
+| GIF    | `anime_name`                               |
 
-`url` dan `dimensions` disertakan dalam keduanya.
+`url` dan `dimensions` selalu disertakan pada keduanya.

@@ -2,9 +2,8 @@
 layout: home
 
 hero:
-  name: "NEKOSBEST
-API DOCUMENTATION"
-  tagline: Documentazione ufficiale per sviluppatori di nekos.best.
+  name: "NEKOSBEST\nAPI DOCS"
+  tagline: Documentazione ufficiale per sviluppatori di NEKOSBEST.
   actions:
     - theme: brand
       text: Inizia
@@ -24,12 +23,12 @@ API DOCUMENTATION"
     <a class="feature-card feature-card-link" href="/it/getting-started/introduction">
       <img src="/icons/person.svg" alt="Introduzione" />
       <h3>Introduzione</h3>
-      <p>Chi siamo e le nostre funzionalità principali.</p>
+      <p>Chi siamo e le nostre funzionalità più apprezzate.</p>
     </a>
     <a class="feature-card feature-card-link" href="/it/getting-started/api-endpoints">
       <img src="/icons/http.svg" alt="Endpoint API" />
       <h3>Endpoint API</h3>
-      <p>Tutti gli endpoint, parametri, formati di risposta ed esempi.</p>
+      <p>Tutti gli endpoint, i parametri, i formati di risposta e gli esempi.</p>
     </a>
     <a class="feature-card feature-card-link" href="/it/getting-started/faq">
       <img src="/icons/question_mark.svg" alt="Domande frequenti" />
@@ -42,17 +41,17 @@ API DOCUMENTATION"
     <a class="feature-card feature-card-link" href="/legal/tos">
       <img src="/icons/gavel.svg" alt="Termini di servizio" />
       <h3>Termini di servizio</h3>
-      <p>Le regole base per l'uso del sito e dei servizi.</p>
+      <p>Le regole e le condizioni di base per utilizzare il nostro sito web e i nostri servizi.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="Informativa sulla privacy" />
       <h3>Informativa sulla privacy</h3>
-      <p>Come raccogliamo e proteggiamo i tuoi dati.</p>
+      <p>Come raccogliamo, utilizziamo, conserviamo e proteggiamo i tuoi dati personali.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/dmca">
       <img src="/icons/bid_landscape_disabled.svg" alt="Notifica DMCA" />
       <h3>Notifica DMCA</h3>
-      <p>Procedura per reclami sul copyright e rimozione.</p>
+      <p>Procedure per inviare segnalazioni di violazione del copyright e richieste di rimozione.</p>
     </a>
   </div>
   

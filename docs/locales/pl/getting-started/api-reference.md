@@ -6,52 +6,55 @@ outline: [2, 3]
 
 ## Limity zapytań (Rate Limits)
 
-Każda odpowiedź zawiera następujące nagłówki pomagające śledzić i przestrzegać limitów zapytań:
+Każda odpowiedź zawiera poniższe nagłówki, które ułatwiają śledzenie i przestrzeganie limitów zapytań:
 
-| Nagłówek                | Opis                                                    |
-| ----------------------- | ------------------------------------------------------- |
-| `x-rate-limit-limit`    | Czas trwania okna limitu zapytań (np. `1m`)             |
-| `x-rate-limit-remaining`| Pozostała liczba zapytań w bieżącym oknie               |
-| `x-rate-limit-reset`    | Znacznik czasu ISO 8601 określający reset okna          |
+| Nagłówek                 | Opis                                                               |
+| ------------------------ | ------------------------------------------------------------------ |
+| `x-rate-limit-limit`     | Czas trwania bieżącego okna limitu zapytań (np. `1m`)              |
+| `x-rate-limit-remaining` | Liczba pozostałych zapytań w bieżącym oknie                        |
+| `x-rate-limit-reset`     | Znacznik czasu ISO 8601 określający moment resetu bieżącego okna   |
 
 ### Limity
 
-| Punkt końcowy | Limit                                       |
-| ------------- | ------------------------------------------- |
-| `/search`     | 7 zapytań na 5 sekund                       |
-| `/:category`  | 200 zapytań na minutę (na kategorię)        |
+| Endpoint                       | Limit                                                         |
+| ------------------------------ | ------------------------------------------------------------- |
+| `/search`                      | 7 zapytań na 5 sekund                                         |
+| `/:category`                   | 200 zapytań na minutę (na kategorię)                          |
+| `/:category/:filename.:format` | 200 zapytań na minutę (wspólny dla zasobów `.png` i `.gif`)   |
 
 ## User-Agent
 
-Wszystkie zapytania muszą zawierać nagłówek `User-Agent`. Prosimy o stosowanie następującego formatu: `NAZWA_APLIKACJI (DANE_KONTAKTOWE)`.\
+Choć własny nagłówek `User-Agent` nie jest wymagany, zalecamy ustawianie go w zapytaniach w następującym formacie: `NAZWA_APLIKACJI (DANE_KONTAKTOWE)`.\
 Na przykład: `NekoApp (https://example.com)` lub `NekoApp (dev@example.com)`
 
-**Wskazówki dotyczące nazewnictwa:**
+**Sugerowane zasady nazewnictwa:**
 
-* **Bądź precyzyjny:** Nie używaj ogólnych nazw, takich jak „Discord Bot”, „WhatsApp Bot” czy „Telegram Bot”. Twoja aplikacja musi posiadać unikalną nazwę.
-* **Unikaj nazw zastępczych:** Nie używaj ciągów znaków takich jak `test`, `bot` ani powyższych wartości przykładowych.
-* **Brak domyślnych wartości bibliotek:** Unikaj używania domyślnych nagłówków bibliotek, takich jak `python-requests`, `okhttp`, `axios`, `node` czy `Go-http-client`.
+* **Bądź konkretny:** Użyj faktycznej nazwy swojej aplikacji zamiast ogólnych etykiet takich jak „Discord Bot”, „WhatsApp Bot” czy „Telegram Bot”.
+* **Unikaj nazw zastępczych:** Unikaj ciągów znaków takich jak `test`, `bot` czy powyższych przykładów.
+* **Unikaj domyślnych wartości bibliotek:** Lepiej ustawić własną wartość zamiast domyślnych nagłówków bibliotek, takich jak `python-requests`, `okhttp`, `axios`, `node` czy `Go-http-client`.
 
-**Opcje danych kontaktowych:**\
-Dane kontaktowe nie muszą być tradycyjną stroną internetową. Każda z poniższych opcji jest akceptowalnym sposobem identyfikacji:
+**Przykładowe dane kontaktowe:**\
+Dane kontaktowe nie muszą być tradycyjną stroną internetową. Świetnie sprawdzi się każda z poniższych opcji:
 
 * Bezpośredni adres e-mail do kontaktu.
-* Strona internetowa projektu lub **publiczne** repozytorium (np. GitHub, GitLab).
-* Link zaproszenia bota lub strona informacyjna.
-* Link z listingu (np. top.gg lub podobne katalogi).
+* Strona projektu lub link do **publicznego** repozytorium (np. GitHub, GitLab).
+* Link zaproszenia bota lub jego strona w katalogu.
+* Link z serwisu z listą botów (np. top.gg lub podobnych katalogów).
 
 **Podszywanie się i fałszowanie:**
 
-* **Nie fałszuj ciągów znaków przeglądarek.** Format `Mozilla/5.0 ...` jest zarezerwowany wyłącznie dla prawdziwych przeglądarek internetowych oraz botów zweryfikowanych przez Cloudflare.
-* **Nie podszywaj się pod znane roboty indeksujące**, takie jak `Googlebot` czy `Bingbot`.
+* **Nie podszywaj się pod przeglądarki.** Format `Mozilla/5.0 ...` jest zarezerwowany wyłącznie dla prawdziwych przeglądarek internetowych oraz botów zweryfikowanych przez Cloudflare.
+* **Nie podszywaj się pod znane crawlery**, takie jak `Googlebot` czy `Bingbot`.
 
-*Niezastosowanie się do tych wytycznych oraz używanie wartości ogólnych, domyślnych lub sfałszowanych prawdopodobnie skutkować będzie zablokowaniem Twoich zapytań.*
+::: info
+Brak własnego nagłówka `User-Agent` zwiększa ryzyko oznaczenia lub zablokowania przez nasz automatyczny system wykrywania nadużyć (`NB-BCFSD`).
+:::
 
 ## Kategorie
 
-Kategorie określają typ treści zwracanych przez API. Każda kategoria jest przypisana do stałego formatu pliku.
+Kategorie określają typ treści zwracanych przez API. Każda kategoria ma przypisany stały format pliku.
 
-### Obrazy
+### Obrazy (4)
 
 <div class="category-grid">
   <span class="category-chip">husbando</span>
@@ -60,7 +63,7 @@ Kategorie określają typ treści zwracanych przez API. Każda kategoria jest pr
   <span class="category-chip">waifu</span>
 </div>
 
-### GIF-y
+### GIF-y (59)
 
 <div class="category-grid">
   <span class="category-chip">angry</span>
@@ -126,9 +129,9 @@ Kategorie określają typ treści zwracanych przez API. Każda kategoria jest pr
 
 ### Pola odpowiedzi
 
-| Typ    | Pola                                        |
-| ------ | ------------------------------------------- |
-| Obrazy | `artist_name`, `artist_href`, `source_url`  |
-| GIF-y  | `anime_name`                                |
+| Typ    | Pola                                       |
+| ------ | ------------------------------------------ |
+| Obrazy | `artist_name`, `artist_href`, `source_url` |
+| GIF-y  | `anime_name`                               |
 
-Pola `url` oraz `dimensions` są zawarte w obu typach.
+Pola `url` i `dimensions` są zwracane w obu typach.

@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "NEKOSBEST\nAPI ドキュメント"
-  tagline: nekos.best 公式開発者ドキュメント。
+  tagline: NEKOSBEST 公式開発者ドキュメント。
   actions:
     - theme: brand
       text: はじめに
@@ -21,19 +21,19 @@ hero:
 
   <div class="feature-grid home-grid-3">
     <a class="feature-card feature-card-link" href="/ja/getting-started/introduction">
-      <img src="/icons/person.svg" alt="概要" />
-      <h3>概要</h3>
-      <p>運営情報および人気機能について。</p>
+      <img src="/icons/person.svg" alt="はじめに" />
+      <h3>はじめに</h3>
+      <p>NEKOSBEST の概要と主な特徴をご紹介します。</p>
     </a>
     <a class="feature-card feature-card-link" href="/ja/getting-started/api-endpoints">
       <img src="/icons/http.svg" alt="API エンドポイント" />
       <h3>API エンドポイント</h3>
-      <p>全エンドポイント、パラメータ、レスポンス形式、出力例。</p>
+      <p>全エンドポイント、パラメータ、レスポンス形式と出力例を確認できます。</p>
     </a>
     <a class="feature-card feature-card-link" href="/ja/getting-started/faq">
       <img src="/icons/question_mark.svg" alt="よくある質問" />
       <h3>よくある質問 (FAQ)</h3>
-      <p>頻繁に寄せられる質問と回答。</p>
+      <p>よく寄せられる質問と回答をまとめています。</p>
     </a>
   </div>
 
@@ -41,17 +41,17 @@ hero:
     <a class="feature-card feature-card-link" href="/legal/tos">
       <img src="/icons/gavel.svg" alt="利用規約" />
       <h3>利用規約</h3>
-      <p>ウェブサイトおよびサービス利用に関する基本規約。</p>
+      <p>ウェブサイトおよびサービス利用に関する基本的なルールと規約です。</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="プライバシーポリシー" />
       <h3>プライバシーポリシー</h3>
-      <p>個人データの収集、利用、保管および保護方針。</p>
+      <p>個人データの収集・利用・保管および保護方針について説明しています。</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/dmca">
       <img src="/icons/bid_landscape_disabled.svg" alt="DMCA 削除請求" />
       <h3>DMCA 削除請求</h3>
-      <p>著作権侵害の申し立ておよび削除手続き。</p>
+      <p>著作権侵害の申し立ておよびコンテンツ削除の手続きについて案内しています。</p>
     </a>
   </div>
   

@@ -4,54 +4,57 @@ outline: [2, 3]
 
 # API-Referenz
 
-## Ratenlimits (Rate Limits)
+## Rate-Limits
 
-Jede Antwort enthält die folgenden Header, die Ihnen helfen, Ratenlimits zu verfolgen und einzuhalten:
+Jede Antwort enthält die folgenden Header, mit denen du Rate-Limits nachverfolgen und einhalten kannst:
 
-| Header                  | Beschreibung                                                  |
-| ----------------------- | ------------------------------------------------------------- |
-| `x-rate-limit-limit`    | Dauer des aktuellen Ratenlimit-Fensters (z. B. `1m`)          |
-| `x-rate-limit-remaining`| Verbleibende Anfragen im aktuellen Fenster                    |
-| `x-rate-limit-reset`    | ISO 8601-Zeitstempel, wann das aktuelle Fenster zurückgesetzt wird |
+| Header                   | Beschreibung                                                         |
+| ------------------------ | -------------------------------------------------------------------- |
+| `x-rate-limit-limit`     | Dauer des aktuellen Rate-Limit-Fensters (z. B. `1m`)                 |
+| `x-rate-limit-remaining` | Verbleibende Anfragen im aktuellen Fenster                           |
+| `x-rate-limit-reset`     | ISO-8601-Zeitstempel, wann das aktuelle Fenster zurückgesetzt wird   |
 
 ### Limits
 
-| Endpunkt      | Limit                                       |
-| ------------- | ------------------------------------------- |
-| `/search`     | 7 Anfragen pro 5 Sekunden                   |
-| `/:category`  | 200 Anfragen pro Minute (pro Kategorie)     |
+| Endpunkt                       | Limit                                                             |
+| ------------------------------ | ----------------------------------------------------------------- |
+| `/search`                      | 7 Anfragen pro 5 Sekunden                                         |
+| `/:category`                   | 200 Anfragen pro Minute (pro Kategorie)                           |
+| `/:category/:filename.:format` | 200 Anfragen pro Minute (geteilt über `.png`- und `.gif`-Assets)  |
 
 ## User-Agent
 
-Alle Anfragen müssen einen `User-Agent`-Header enthalten. Bitte verwenden Sie das folgende Format: `APP_NAME (CONTACT_INFO)`.\
+Ein eigener `User-Agent`-Header ist zwar nicht zwingend erforderlich, wir empfehlen jedoch, ihn bei deinen Anfragen im folgenden Format mitzusenden: `APP_NAME (CONTACT_INFO)`.\
 Zum Beispiel: `NekoApp (https://example.com)` oder `NekoApp (dev@example.com)`
 
-**Richtlinien für die Benennung:**
+**Empfehlungen zur Benennung:**
 
-* **Seien Sie spezifisch:** Verwenden Sie keine generischen Namen wie „Discord Bot“, „WhatsApp Bot“ oder „Telegram Bot“. Ihre Anwendung muss einen eindeutigen Namen haben.
-* **Vermeiden Sie Platzhalter:** Verwenden Sie keine Zeichenfolgen wie `test`, `bot` oder den obigen Beispielwert.
-* **Keine Standardwerte von Bibliotheken:** Vermeiden Sie die Verwendung von Standard-Bibliotheks-Strings wie `python-requests`, `okhttp`, `axios`, `node` oder `Go-http-client`.
+* **Sei spezifisch:** Verwende den tatsächlichen Namen deiner Anwendung statt generischer Bezeichnungen wie „Discord Bot“, „WhatsApp Bot“ oder „Telegram Bot“.
+* **Vermeide Platzhalter:** Verzichte auf Platzhalter wie `test`, `bot` oder die obigen Beispielwerte.
+* **Vermeide Bibliotheks-Standardwerte:** Nutze lieber einen eigenen Wert als Standard-Strings von HTTP-Clients wie `python-requests`, `okhttp`, `axios`, `node` oder `Go-http-client`.
 
-**Optionen für Kontaktinformationen:**\
-Die Kontaktinformation muss keine traditionelle Website sein. Jede der folgenden Möglichkeiten ist eine akzeptable Form der Identifizierung:
+**Mögliche Kontaktinformationen:**\
+Die Kontaktangabe muss keine klassische Website sein. Jede der folgenden Optionen eignet sich gut:
 
 * Eine direkte Kontakt-E-Mail-Adresse.
 * Eine Projekt-Website oder eine **öffentliche** Repository-URL (z. B. GitHub, GitLab).
 * Ein Bot-Einladungslink oder eine Discovery-Seite.
 * Eine Listing-URL (z. B. top.gg oder ähnliche Verzeichnisse).
 
-**Vortäuschen und Identitätsdiebstahl (Spoofing & Impersonation):**
+**Spoofing und Nachahmung:**
 
-* **Täuschen Sie keine Browser-Strings vor.** Das Format `Mozilla/5.0 ...` ist strikt echten Webbrowsern und von Cloudflare verifizierten Bots vorbehalten.
-* **Geben Sie sich nicht als bekannte Crawler aus**, wie z. B. `Googlebot` oder `Bingbot`.
+* **Kein Browser-Spoofing:** Das Format `Mozilla/5.0 ...` ist echten Webbrowsern und von Cloudflare verifizierten Bots vorbehalten.
+* **Gib dich nicht als bekannte Crawler aus**, wie z. B. `Googlebot` oder `Bingbot`.
 
-*Die Nichtbeachtung dieser Richtlinien sowie die Verwendung generischer, Standard- oder vorgetäuschter Werte führen sehr wahrscheinlich dazu, dass Ihre Anfragen blockiert werden.*
+::: info
+Wenn du keinen eigenen `User-Agent`-Header setzt, steigt die Wahrscheinlichkeit, von unserer automatischen Missbrauchserkennung (`NB-BCFSD`) markiert oder gesperrt zu werden.
+:::
 
 ## Kategorien
 
 Kategorien definieren die Art der von der API zurückgegebenen Inhalte. Jede Kategorie ist einem festen Dateiformat zugeordnet.
 
-### Bilder
+### Bilder (4)
 
 <div class="category-grid">
   <span class="category-chip">husbando</span>
@@ -60,7 +63,7 @@ Kategorien definieren die Art der von der API zurückgegebenen Inhalte. Jede Kat
   <span class="category-chip">waifu</span>
 </div>
 
-### GIFs
+### GIFs (59)
 
 <div class="category-grid">
   <span class="category-chip">angry</span>

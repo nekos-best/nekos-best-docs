@@ -4,54 +4,57 @@ outline: [2, 3]
 
 # Referencia de la API
 
-## Límites de Tasa (Rate Limits)
+## Límites de solicitudes (Rate Limits)
 
-Todas las respuestas incluyen los siguientes encabezados para ayudarle a rastrear y respetar los límites de tasa:
+Todas las respuestas incluyen los siguientes encabezados para ayudarte a controlar y respetar los límites de solicitudes:
 
-| Encabezado              | Descripción                                              |
-| ----------------------- | -------------------------------------------------------- |
-| `x-rate-limit-limit`    | Duración de la ventana del límite de tasa actual (ej. `1m`) |
-| `x-rate-limit-remaining`| Peticiones restantes en la ventana actual                |
-| `x-rate-limit-reset`    | Marca de tiempo ISO 8601 de cuándo se reinicia la ventana actual |
+| Encabezado               | Descripción                                                                   |
+| ------------------------ | ----------------------------------------------------------------------------- |
+| `x-rate-limit-limit`     | Duración de la ventana actual de límite de solicitudes (p. ej., `1m`)         |
+| `x-rate-limit-remaining` | Solicitudes restantes en la ventana actual                                    |
+| `x-rate-limit-reset`     | Marca de tiempo en formato ISO 8601 que indica cuándo se reinicia la ventana  |
 
 ### Límites
 
-| Endpoint      | Límite                                      |
-| ------------- | ------------------------------------------- |
-| `/search`     | 7 peticiones por 5 segundos                 |
-| `/:category`  | 200 peticiones por minuto (por categoría)   |
+| Endpoint                       | Límite                                                           |
+| ------------------------------ | ---------------------------------------------------------------- |
+| `/search`                      | 7 solicitudes cada 5 segundos                                    |
+| `/:category`                   | 200 solicitudes por minuto (por categoría)                       |
+| `/:category/:filename.:format` | 200 solicitudes por minuto (compartido entre recursos `.png` y `.gif`) |
 
 ## User-Agent
 
-Todas las peticiones deben incluir un encabezado `User-Agent`. Por favor usa el siguiente formato: `NOMBRE_APP (INFO_CONTACTO)`.\
+Aunque no es obligatorio incluir un encabezado `User-Agent` personalizado, te recomendamos configurar uno en tus solicitudes con el siguiente formato: `NOMBRE_APP (INFO_CONTACTO)`.\
 Por ejemplo: `NekoApp (https://example.com)` o `NekoApp (dev@example.com)`
 
-**Pautas de Nombres:**
+**Sugerencias de nombres:**
 
-* **Sé específico:** No uses nombres genéricos como "Discord Bot", "WhatsApp Bot" o "Telegram Bot". Tu aplicación debe tener un nombre único.
-* **Evita marcadores de posición:** No uses cadenas como `test`, `bot` o el valor de ejemplo anterior.
-* **Sin valores predeterminados de librería:** Evita usar cadenas predeterminadas de librerías como `python-requests`, `okhttp`, `axios`, `node` o `Go-http-client`.
+* **Sé específico:** Usa el nombre real de tu aplicación en lugar de etiquetas genéricas como "Discord Bot", "WhatsApp Bot" o "Telegram Bot".
+* **Evita valores genéricos:** Evita cadenas de relleno como `test`, `bot` o los valores de ejemplo anteriores.
+* **Evita valores predeterminados de bibliotecas:** Es preferible usar un valor personalizado en lugar de las cadenas predeterminadas de bibliotecas como `python-requests`, `okhttp`, `axios`, `node` o `Go-http-client`.
 
-**Opciones de Información de Contacto:**\
-La información de contacto no tiene que ser un sitio web tradicional. Cualquiera de las siguientes es una forma aceptable de proporcionar identificación:
+**Opciones de información de contacto:**\
+La información de contacto no tiene por qué ser un sitio web tradicional. Cualquiera de las siguientes opciones funciona bien:
 
 * Una dirección de correo electrónico de contacto directo.
-* Un sitio web del proyecto o una URL de repositorio **público** (ej. GitHub, GitLab).
-* Un enlace de invitación de bot o página de descubrimiento.
-* Una URL de lista (ej. top.gg o directorios similares).
+* El sitio web de tu proyecto o la URL de un repositorio **público** (p. ej., GitHub o GitLab).
+* Un enlace de invitación de tu bot o su página de descubrimiento.
+* La URL de un listado o directorio (p. ej., top.gg u otros similares).
 
-**Suplantación y Falsificación:**
+**Suplantación y falsificación:**
 
-* **No falsifiques cadenas de navegador.** El formato `Mozilla/5.0 ...` está estrictamente reservado para navegadores web reales y bots verificados por Cloudflare.
-* **No suplantes bots de búsqueda conocidos** como `Googlebot` o `Bingbot`.
+* **No falsifiques cadenas de navegador.** El formato `Mozilla/5.0 ...` está reservado para navegadores web reales y bots verificados por Cloudflare.
+* **No suplantes rastreadores conocidos** como `Googlebot` o `Bingbot`.
 
-*El incumplimiento de estas pautas y el uso de valores genéricos, predeterminados o falsificados probablemente resultará en el bloqueo de sus peticiones.*
+::: info
+No configurar un encabezado `User-Agent` personalizado aumenta las probabilidades de que nuestro sistema automático de detección de abuso marque o bloquee tus solicitudes (`NB-BCFSD`).
+:::
 
 ## Categorías
 
-Las categorías definen el tipo de contenido devuelto por la API. Cada categoría se asigna a un formato de archivo fijo.
+Las categorías definen el tipo de contenido que devuelve la API. Cada categoría corresponde a un formato de archivo fijo.
 
-### Imágenes
+### Imágenes (4)
 
 <div class="category-grid">
   <span class="category-chip">husbando</span>
@@ -60,7 +63,7 @@ Las categorías definen el tipo de contenido devuelto por la API. Cada categorí
   <span class="category-chip">waifu</span>
 </div>
 
-### GIFs
+### GIFs (59)
 
 <div class="category-grid">
   <span class="category-chip">angry</span>
@@ -124,11 +127,11 @@ Las categorías definen el tipo de contenido devuelto por la API. Cada categorí
   <span class="category-chip">yeet</span>
 </div>
 
-### Campos de Respuesta
+### Campos de respuesta
 
-| Tipo     | Campos                                      |
-| -------- | ------------------------------------------- |
-| Imágenes | `artist_name`, `artist_href`, `source_url`  |
-| GIFs     | `anime_name`                                |
+| Tipo     | Campos                                     |
+| -------- | ------------------------------------------ |
+| Imágenes | `artist_name`, `artist_href`, `source_url` |
+| GIFs     | `anime_name`                               |
 
-`url` y `dimensions` están incluidos en ambos.
+Tanto `url` como `dimensions` se incluyen en ambos tipos.

@@ -41,13 +41,13 @@ We've been active since **February 2021** and serve high quality, family friendl
   <div class="feature-card">
     <img src="/icons/bolt.svg" alt="Fast & reliable" />
     <h3>Fast & reliable</h3>
-    <p>High uptime and low-latency responses.</p>
+    <p>High uptime, low-latency responses, and small, optimized GIFs (~900 KB avg).</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/burst_mode.svg" alt="Wide variety of endpoints" />
     <h3>Wide variety of endpoints</h3>
-    <p>A total of 4 images and 59 GIF endpoints with more planned.</p>
+    <p>5,000+ assets across 4 image and 59 GIF endpoints, with more planned.</p>
   </div>
 
   <div class="feature-card">

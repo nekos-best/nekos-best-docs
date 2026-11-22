@@ -16,42 +16,45 @@ Evewy wesponse incwudes the fowwowing headews to hewp you twack and wespect wate
 
 ### Wimits UwU
 
-| Endpoint      | Wimit                                       |
-| ------------- | ------------------------------------------- |
-| `/search`     | 7 weqwesties pew 5 seconds                  |
-| `/:category`  | 200 weqwesties pew minute (pew categowy)    |
+| Endpoint                       | Wimit                                                            |
+| ------------------------------ | ---------------------------------------------------------------- |
+| `/search`                      | 7 weqwesties pew 5 seconds                                       |
+| `/:category`                   | 200 weqwesties pew minute (pew categowy)                         |
+| `/:category/:filename.:format` | 200 weqwesties pew minute (shawed acwoss `.png` & `.gif` assets) |
 
 ## User-Agent nya~
 
-Aww weqwesties must incwude a `User-Agent` headew OwO. Pwease use the fowwowing fowmat: `APP_NAME (CONTACT_INFO)`.\
-Fow exampwe: `NekoApp (https://example.com)` ow `NekoApp (dev@example.com)`
+Whiwe a custom `User-Agent` headew is not wequiwed, we wecommend setting one on youw weqwesties using da fowwowing fowmat: `APP_NAME (CONTACT_INFO)`.\
+Fow exampwe: `NekoApp (https://example.com)` ow `NekoApp (dev@example.com)` OwO
 
-**Naming Guidewines >w<:**
+**Suggested Naming Guidewines >w<:**
 
-* **Be specific:** Do not use genewic names wike "Discord Bot", "WhatsApp Bot", ow "Telegram Bot". Youw appwicawion must have a uniqwe name nya~.
-* **Avoid pwacehowdews:** Do not use stwings wike `test`, `bot`, ow the exampwe vawue above OwO.
-* **No wibwawy defauwts:** Avoid using defauwt wibwawy stwings such as `python-requests`, `okhttp`, `axios`, `node`, ow `Go-http-client` UwU.
+* **Be specific:** Use youw appwication's actuaw name wathew dan genewic wabews wike "Discord Bot", "WhatsApp Bot", ow "Telegram Bot" nya~.
+* **Avoid pwacehowdews:** Avoid pwacehowdew stwings wike `test`, `bot`, ow da exampwe vawues above OwO.
+* **Avoid wibwawy defauwts:** Pwefew a custom vawue ovew defauwt wibwawy stwings such as `python-requests`, `okhttp`, `axios`, `node`, ow `Go-http-client` UwU.
 
 **Contact Infowmation Options nya~:**\
-The contact info does not have to be a twaditionaw website. Any of the fowwowing awe acceptabwe ways to pwovide identificawion:
+Da contact info does not have to be a twaditionaw website. Any of da fowwowing wowk weww:
 
 * A diwect contact emaiw addwess.
 * A pwoject website ow **pubwic** wepositowy UWL (e.g., GitHub, GitLab).
 * A bot invite wink ow discovewy page >w<.
 * A wisting UWL (e.g., top.gg ow simiwaw diwectowies).
 
-**Spoofing and Impewsonawion OwO:**
+**Spoofing and Impewsonation OwO:**
 
-* **Do not spoof bwowsew stwings.** The `Mozilla/5.0 ...` fowmat is stwictwy wesewved fow weaw web bwowsews and Cwoudfwawe-vewified bots nya~.
+* **Do not spoof bwowsew stwings.** Da `Mozilla/5.0 ...` fowmat is wesewved fow weaw web bwowsews and Cwoudfwawe-vewified bots nya~.
 * **Do not impewsonate known cwawwews** wike `Googlebot` ow `Bingbot`.
 
-*Faiwuwe to fowlow these guidewines and using genewic, defauwt, ow spoofed vawues wiww wikewy weswt in youw weqwesties being bwocked >w< !*
+::: info
+Not setting a custom `User-Agent` headew cawwies a highew chance of being fwagged ow banned by ouw automated abuse detection (`NB-BCFSD`) >w<.
+:::
 
 ## Categowies UwU
 
-Categowies define the type of content wetuwned by the API. Each categowy maps to a fixed fiwe fowmat nya~.
+Categowies define da type of content wetuwned by da API. Each categowy maps to a fixed fiwe fowmat nya~.
 
-### Images OwO
+### Images (4) OwO
 
 <div class="category-grid">
   <span class="category-chip">husbando</span>
@@ -60,7 +63,7 @@ Categowies define the type of content wetuwned by the API. Each categowy maps to
   <span class="category-chip">waifu</span>
 </div>
 
-### GIFs >w<
+### GIFs (59) >w<
 
 <div class="category-grid">
   <span class="category-chip">angry</span>

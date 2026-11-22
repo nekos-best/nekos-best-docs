@@ -181,3 +181,160 @@
 .VPNavScreenTranslations .title {
     color: var(--vp-c-brand-1) !important;
 }
+
+.VPNavBarTranslations .title,
+.VPNavTranslations.group > .title,
+.VPNavTranslations a[lang] {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    direction: inherit;
+}
+
+.VPNavScreenTranslations .link[lang] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    direction: inherit;
+}
+
+.VPNavBarTranslations .title::before,
+.VPNavTranslations.group > .title::before,
+.VPNavTranslations a[lang]::before {
+    content: "";
+    display: inline-block;
+    width: 1.25rem;
+    height: 0.9375rem;
+    flex: none;
+    pointer-events: none;
+    border-radius: 2px;
+    background: var(--flag-icon) center / cover no-repeat;
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--vp-c-text-1) 18%, transparent);
+    forced-color-adjust: none;
+}
+
+:root[lang="en"] .VPNavBarTranslations .title,
+:root[lang="en"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="en"] {
+    --flag-icon: url("flag-icons/flags/4x3/us.svg");
+}
+
+:root[lang="de"] .VPNavBarTranslations .title,
+:root[lang="de"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="de"] {
+    --flag-icon: url("flag-icons/flags/4x3/de.svg");
+}
+
+:root[lang="id"] .VPNavBarTranslations .title,
+:root[lang="id"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="id"] {
+    --flag-icon: url("flag-icons/flags/4x3/id.svg");
+}
+
+:root[lang="pt"] .VPNavBarTranslations .title,
+:root[lang="pt"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="pt"] {
+    --flag-icon: url("flag-icons/flags/4x3/br.svg");
+}
+
+:root[lang="es"] .VPNavBarTranslations .title,
+:root[lang="es"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="es"] {
+    --flag-icon: url("flag-icons/flags/4x3/es.svg");
+}
+
+:root[lang="vi"] .VPNavBarTranslations .title,
+:root[lang="vi"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="vi"] {
+    --flag-icon: url("flag-icons/flags/4x3/vn.svg");
+}
+
+:root[lang="fr"] .VPNavBarTranslations .title,
+:root[lang="fr"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="fr"] {
+    --flag-icon: url("flag-icons/flags/4x3/fr.svg");
+}
+
+:root[lang="ru"] .VPNavBarTranslations .title,
+:root[lang="ru"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="ru"] {
+    --flag-icon: url("flag-icons/flags/4x3/ru.svg");
+}
+
+:root[lang="zh-CN"] .VPNavBarTranslations .title,
+:root[lang="zh-CN"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="zh-CN"] {
+    --flag-icon: url("flag-icons/flags/4x3/cn.svg");
+}
+
+:root[lang="ja"] .VPNavBarTranslations .title,
+:root[lang="ja"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="ja"] {
+    --flag-icon: url("flag-icons/flags/4x3/jp.svg");
+}
+
+:root[lang="pl"] .VPNavBarTranslations .title,
+:root[lang="pl"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="pl"] {
+    --flag-icon: url("flag-icons/flags/4x3/pl.svg");
+}
+
+:root[lang="tr"] .VPNavBarTranslations .title,
+:root[lang="tr"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="tr"] {
+    --flag-icon: url("flag-icons/flags/4x3/tr.svg");
+}
+
+:root[lang="uk"] .VPNavBarTranslations .title,
+:root[lang="uk"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="uk"] {
+    --flag-icon: url("flag-icons/flags/4x3/ua.svg");
+}
+
+:root[lang="owo"] .VPNavBarTranslations .title,
+:root[lang="owo"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="owo"] {
+    --flag-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Crect width='640' height='480' fill='%23e91e63'/%3E%3Cellipse cx='320' cy='315' rx='95' ry='72' fill='%23fff'/%3E%3Cellipse cx='192' cy='218' rx='34' ry='44' transform='rotate(-22 192 218)' fill='%23fff'/%3E%3Cellipse cx='272' cy='158' rx='34' ry='46' transform='rotate(-8 272 158)' fill='%23fff'/%3E%3Cellipse cx='368' cy='158' rx='34' ry='46' transform='rotate(8 368 158)' fill='%23fff'/%3E%3Cellipse cx='448' cy='218' rx='34' ry='44' transform='rotate(22 448 218)' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+:root[lang="ko"] .VPNavBarTranslations .title,
+:root[lang="ko"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="ko"] {
+    --flag-icon: url("flag-icons/flags/4x3/kr.svg");
+}
+
+:root[lang="zh-TW"] .VPNavBarTranslations .title,
+:root[lang="zh-TW"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="zh-TW"] {
+    --flag-icon: url("flag-icons/flags/4x3/tw.svg");
+}
+
+:root[lang="it"] .VPNavBarTranslations .title,
+:root[lang="it"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="it"] {
+    --flag-icon: url("flag-icons/flags/4x3/it.svg");
+}
+
+:root[lang="ar"] .VPNavBarTranslations .title,
+:root[lang="ar"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="ar"] {
+    --flag-icon: url("flag-icons/flags/4x3/sa.svg");
+}
+
+:root[lang="th"] .VPNavBarTranslations .title,
+:root[lang="th"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="th"] {
+    --flag-icon: url("flag-icons/flags/4x3/th.svg");
+}
+
+:root[lang="hu"] .VPNavBarTranslations .title,
+:root[lang="hu"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="hu"] {
+    --flag-icon: url("flag-icons/flags/4x3/hu.svg");
+}
+
+:root[lang="hi"] .VPNavBarTranslations .title,
+:root[lang="hi"] .VPNavTranslations.group > .title,
+.VPNavTranslations a[lang="hi"] {
+    --flag-icon: url("flag-icons/flags/4x3/in.svg");
+}

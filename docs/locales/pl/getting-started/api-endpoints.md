@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Punkty końcowe API
+# Endpointy API
 
 ## Adres bazowy (Base URL)
 
@@ -26,15 +26,15 @@ Zastąp `:version` jedną z obsługiwanych wersji poniżej.
   </div>
 </div>
 
-::: warning Ważne
-Przed wykonaniem jakichkolwiek zapytań zapoznaj się z [dokumentacją User-Agent](/pl/getting-started/api-reference.html#user-agent). Wszystkie zapytania muszą zawierać poprawnie sformatowany nagłówek `User-Agent`.
+::: tip
+Zalecamy ustawienie własnego nagłówka `User-Agent` przy wysyłaniu zapytań. Sprawdź [dokumentację User-Agent](/pl/getting-started/api-reference.html#user-agent), aby poznać sugerowany format.
 :::
 
-## Punkty końcowe
+## Endpointy
 
 ### <Badge type="tip" text="GET" class="http-get" /> /endpoints
 
-Zwraca wszystkie dostępne kategorie API oraz powiązane z nimi formaty plików.
+Zwraca wszystkie dostępne kategorie API oraz przypisane im formaty plików.
 
 #### Przykład
 
@@ -48,22 +48,22 @@ https://nekos.best/api/v2/endpoints
 ```
 
 ::: tip
-Używaj tego punktu końcowego do dynamicznego wykrywania obsługiwanych kategorii zamiast wpisywania ich na stałe w kodzie.
+Używaj tego endpointu do dynamicznego pobierania obsługiwanych kategorii zamiast wpisywać je na sztywno w kodzie.
 :::
 
 ---
 
 ### <Badge type="tip" text="GET" class="http-get" /> /:category
 
-Zwraca losowy obraz lub GIF z określonej kategorii wraz z metadanymi.
+Zwraca losowy obraz lub GIF z podanej kategorii wraz z metadanymi.
 
-#### Parametry zapytania (Query Parameters)
+#### Parametry zapytania
 
 | Nazwa  | Typ    | Wymagane | Opis                                       |
 | ------ | ------ | -------- | ------------------------------------------ |
 | amount | number | Nie      | Liczba wyników do zwrócenia (`1 ≤ X ≤ 20`) |
 
-Domyślnie `1`, jeśli nie określono inaczej.
+Domyślnie `1`, jeśli nie podano.
 
 #### Przykład (pojedynczy wynik)
 
@@ -117,16 +117,16 @@ https://nekos.best/api/v2/hug?amount=2
 
 ### <Badge type="tip" text="GET" class="http-get" /> /search
 
-Wyszukuj obrazy lub GIF-y na podstawie metadanych, takich jak nazwy artystów lub tytuły źródeł.
+Wyszukuje obrazy lub GIF-y na podstawie metadanych, takich jak nazwy artystów czy tytuły źródeł.
 
-#### Parametry zapytania (Query Parameters)
+#### Parametry zapytania
 
-| Nazwa    | Typ    | Wymagane | Opis                                |
-| -------- | ------ | -------- | ----------------------------------- |
-| query    | string | Tak      | Wyszukiwana fraza                   |
-| type     | enum   | Tak      | `1` = obrazy, `2` = GIF-y           |
-| category | string | Nie      | Ogranicz wyniki do wybranej kategorii |
-| amount   | number | Nie      | Liczba wyników (`1 ≤ X ≤ 20`)       |
+| Nazwa    | Typ    | Wymagane | Opis                                  |
+| -------- | ------ | -------- | ------------------------------------- |
+| query    | string | Tak      | Wyszukiwana fraza                     |
+| type     | enum   | Tak      | `1` = obrazy, `2` = GIF-y             |
+| category | string | Nie      | Ogranicza wyniki do wybranej kategorii |
+| amount   | number | Nie      | Liczba wyników (`1 ≤ X ≤ 20`)         |
 
 #### Przykład (wyszukiwanie obrazów)
 
@@ -180,18 +180,18 @@ https://nekos.best/api/v2/search?query=Generic&type=2&category=pat&amount=2
 
 ### <Badge type="tip" text="GET" class="http-get" /> /:category/:filename.:format
 
-Pobiera bezpośrednio określony plik.
+Pobiera wskazany plik bezpośrednio.
 
-#### Parametry ścieżki (Path Parameters)
+#### Parametry ścieżki
 
-| Nazwa    | Opis                         |
-| -------- | ---------------------------- |
-| category | Nazwa kategorii              |
-| filename | Nazwa pliku zasobu (UUID)    |
-| format   | Format pliku (`png`, `gif`)  |
+| Nazwa    | Opis                        |
+| -------- | --------------------------- |
+| category | Nazwa kategorii             |
+| filename | Nazwa pliku zasobu (UUID)   |
+| format   | Format pliku (`png`, `gif`) |
 
 ::: info
-Metadane dla tego punktu końcowego są zwracane w **nagłówkach odpowiedzi HTTP zakodowanych w URL**.
+Metadane dla tego endpointu są zwracane w **nagłówkach odpowiedzi HTTP zakodowanych jako URL**.
 :::
 
 **Dostępne nagłówki:**
@@ -205,4 +205,4 @@ Metadane dla tego punktu końcowego są zwracane w **nagłówkach odpowiedzi HTT
 
 https://nekos.best/api/v2/hug/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.gif
 
-**Odpowiedź:** Binarne dane obrazu lub pliku GIF
+**Odpowiedź:** Dane binarne obrazu lub pliku GIF

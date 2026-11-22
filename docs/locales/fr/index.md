@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "DOCS API\nNEKOSBEST"
-  tagline: Documentation officielle pour développeurs de NEKOSBEST.
+  tagline: Documentation développeur officielle de NEKOSBEST.
   actions:
     - theme: brand
       text: Premiers pas
@@ -23,17 +23,17 @@ hero:
     <a class="feature-card feature-card-link" href="/fr/getting-started/introduction">
       <img src="/icons/person.svg" alt="Introduction" />
       <h3>Introduction</h3>
-      <p>Qui nous sommes et nos fonctionnalités les plus populaires.</p>
+      <p>Qui nous sommes et nos fonctionnalités les plus appréciées.</p>
     </a>
     <a class="feature-card feature-card-link" href="/fr/getting-started/api-endpoints">
       <img src="/icons/http.svg" alt="Points de terminaison API" />
       <h3>Points de terminaison API</h3>
-      <p>Tous les points de terminaison, paramètres, formats de réponse et exemples de sortie.</p>
+      <p>Tous les points de terminaison, paramètres, formats de réponse et exemples.</p>
     </a>
     <a class="feature-card feature-card-link" href="/fr/getting-started/faq">
-      <img src="/icons/question_mark.svg" alt="Foire Aux Questions" />
-      <h3>Foire Aux Questions</h3>
-      <p>Certaines des questions les plus fréquemment posées.</p>
+      <img src="/icons/question_mark.svg" alt="Foire aux questions" />
+      <h3>Foire aux questions</h3>
+      <p>Réponses aux questions les plus fréquemment posées.</p>
     </a>
   </div>
 
@@ -41,7 +41,7 @@ hero:
     <a class="feature-card feature-card-link" href="/legal/tos">
       <img src="/icons/gavel.svg" alt="Conditions d'utilisation" />
       <h3>Conditions d'utilisation</h3>
-      <p>Les règles et conditions fondamentales pour utiliser notre site web et nos services.</p>
+      <p>Les règles et conditions essentielles d'utilisation de notre site et de nos services.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="Politique de confidentialité" />
@@ -51,14 +51,14 @@ hero:
     <a class="feature-card feature-card-link" href="/legal/dmca">
       <img src="/icons/bid_landscape_disabled.svg" alt="Retrait DMCA" />
       <h3>Retrait DMCA</h3>
-      <p>Procédure pour soumettre des réclamations relatives au droit d'auteur et des demandes de retrait.</p>
+      <p>Procédure pour signaler une atteinte au droit d'auteur et demander le retrait d'un contenu.</p>
     </a>
   </div>
   
 </div>
 
 <div class="home-section">
-    <h1 class="home-title">Bibliothèques Officielles</h1>
+    <h1 class="home-title">Bibliothèques officielles</h1>
 
   <div class="feature-grid home-grid-3">
     <a class="feature-card feature-card-link" href="https://github.com/nekos-best/nekos-best.py">

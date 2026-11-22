@@ -26,15 +26,15 @@ Remplacez `:version` par l'une des versions prises en charge ci-dessous.
   </div>
 </div>
 
-::: warning Important
-Avant d'effectuer des requêtes, veuillez lire la [documentation sur le User-Agent](/fr/getting-started/api-reference.html#user-agent). Toutes les requêtes doivent inclure un en-tête `User-Agent` correctement formaté.
+::: tip
+Nous vous recommandons de définir un en-tête `User-Agent` personnalisé lors de vos requêtes. Consultez la [documentation User-Agent](/fr/getting-started/api-reference.html#user-agent) pour connaître le format conseillé.
 :::
 
 ## Points de terminaison
 
 ### <Badge type="tip" text="GET" class="http-get" /> /endpoints
 
-Retourne toutes les catégories d'API disponibles et leurs formats de fichiers associés.
+Renvoie toutes les catégories disponibles dans l'API ainsi que leur format de fichier associé.
 
 #### Exemple
 
@@ -55,15 +55,15 @@ Utilisez ce point de terminaison pour découvrir dynamiquement les catégories p
 
 ### <Badge type="tip" text="GET" class="http-get" /> /:category
 
-Retourne une image ou un GIF aléatoire à partir de la catégorie spécifiée, incluant les métadonnées.
+Renvoie une image ou un GIF aléatoire issu de la catégorie spécifiée, accompagné de ses métadonnées.
 
 #### Paramètres de requête
 
-| Nom    | Type   | Requis | Description                                           |
-| ------ | ------ | ------ | ----------------------------------------------------- |
-| amount | number | Non    | Nombre de résultats à retourner (`1 ≤ X ≤ 20`)        |
+| Nom    | Type   | Requis | Description                                       |
+| ------ | ------ | ------ | ------------------------------------------------- |
+| amount | number | Non    | Nombre de résultats à renvoyer (`1 ≤ X ≤ 20`)     |
 
-Défini par défaut sur `1` si non spécifié.
+Valeur par défaut : `1` si non spécifié.
 
 #### Exemple (résultat unique)
 
@@ -117,18 +117,18 @@ https://nekos.best/api/v2/hug?amount=2
 
 ### <Badge type="tip" text="GET" class="http-get" /> /search
 
-Recherchez des images ou des GIFs à l'aide de métadonnées telles que les noms d'artistes ou les titres des sources.
+Recherche des images ou des GIFs à partir de métadonnées telles que le nom d'un artiste ou le titre d'une œuvre.
 
 #### Paramètres de requête
 
-| Nom      | Type   | Requis | Description                                     |
-| -------- | ------ | ------ | ----------------------------------------------- |
-| query    | string | Oui    | Terme de recherche                              |
-| type     | enum   | Oui    | `1` = images, `2` = GIFs                        |
-| category | string | Non    | Restreindre les résultats à une catégorie       |
-| amount   | number | Non    | Nombre de résultats (`1 ≤ X ≤ 20`)              |
+| Nom      | Type   | Requis | Description                                 |
+| -------- | ------ | ------ | ------------------------------------------- |
+| query    | string | Oui    | Terme de recherche                          |
+| type     | enum   | Oui    | `1` = images, `2` = GIFs                    |
+| category | string | Non    | Restreindre les résultats à une catégorie   |
+| amount   | number | Non    | Nombre de résultats (`1 ≤ X ≤ 20`)          |
 
-#### Exemple (recherche d'image)
+#### Exemple (recherche d'images)
 
 https://nekos.best/api/v2/search?query=John&type=1
 
@@ -149,7 +149,7 @@ https://nekos.best/api/v2/search?query=John&type=1
 }
 ```
 
-#### Exemple (recherche GIF avec catégorie)
+#### Exemple (recherche de GIFs avec catégorie)
 
 https://nekos.best/api/v2/search?query=Generic&type=2&category=pat&amount=2
 
@@ -184,14 +184,14 @@ Récupère directement une ressource spécifique.
 
 #### Paramètres de chemin
 
-| Nom      | Description                        |
-| -------- | ---------------------------------- |
-| category | Nom de la catégorie                |
-| filename | Nom de fichier de la ressource (UUID) |
-| format   | Format de fichier (`png`, `gif`)    |
+| Nom      | Description                          |
+| -------- | ------------------------------------ |
+| category | Nom de la catégorie                  |
+| filename | Nom du fichier de la ressource (UUID)|
+| format   | Format du fichier (`png`, `gif`)     |
 
 ::: info
-Les métadonnées pour ce point de terminaison sont retournées via des **en-têtes de réponse HTTP encodés en URL**.
+Les métadonnées de ce point de terminaison sont renvoyées dans des **en-têtes de réponse HTTP encodés en URL**.
 :::
 
 **En-têtes disponibles :**
@@ -205,4 +205,4 @@ Les métadonnées pour ce point de terminaison sont retournées via des **en-tê
 
 https://nekos.best/api/v2/hug/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.gif
 
-**Réponse :** Données binaires d'image ou de GIF
+**Réponse :** Données binaires de l'image ou du GIF

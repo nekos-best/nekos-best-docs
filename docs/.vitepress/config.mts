@@ -980,7 +980,7 @@ export default defineConfig({
           {
             text: "Wegaw Powicy nya~",
             items: [
-              { text: "Tewms and Conditions", link: "/legal/tos" },
+              { text: "Tewms of Sewvice", link: "/legal/tos" },
               { text: "Pwivacy Powicy", link: "/legal/privacy" },
               { text: "DMCA Takedown", link: "/legal/dmca" },
             ],
@@ -1293,6 +1293,231 @@ export default defineConfig({
         },
       },
     },
+    th: {
+      label: "ภาษาไทย",
+      lang: "th",
+      title: "NEKOSBEST",
+      description: "เอกสารสำหรับนักพัฒนาอย่างเป็นทางการของ nekos.best",
+      themeConfig: {
+        nav: [
+          { text: "หน้าแรก", link: "/th/" },
+          { text: "หน้าสถานะ", link: "https://status.nekos.best" },
+        ],
+        sidebar: [
+          {
+            text: "เริ่มต้นใช้งาน",
+            items: [
+              { text: "แนะนำ API", link: "/th/getting-started/introduction" },
+              { text: "API Endpoints", link: "/th/getting-started/api-endpoints" },
+              { text: "คู่มืออ้างอิง API", link: "/th/getting-started/api-reference" },
+              { text: "คำถามที่พบบ่อย", link: "/th/getting-started/faq" },
+            ],
+          },
+          {
+            text: "ร่วมสมทบ",
+            link: "/th/contribute/contribute",
+            items: [
+              { text: "รูปภาพ & GIF", link: "/th/contribute/images-gifs" },
+              { text: "ตัวอย่างโค้ด", link: "/th/contribute/code-examples" },
+              { text: "ไลบรารีที่ไม่เป็นทางการ", link: "/th/contribute/unofficial-libraries" },
+            ],
+          },
+          {
+            text: "ตัวอย่างโค้ด",
+            items: [
+              { text: "BDFD", link: "/th/examples/bdfd" },
+              { text: "JavaScript", link: "/th/examples/javascript" },
+              { text: "Python", link: "/th/examples/python" },
+            ],
+          },
+          {
+            text: "ไลบรารีอย่างเป็นทางการ",
+            items: [
+              { text: "JavaScript", link: "https://github.com/nekos-best/nekos-best.js" },
+              { text: "Python", link: "https://github.com/nekos-best/nekos-best.py" },
+              { text: "Rust", link: "https://github.com/nekos-best/nekos-best.rs" },
+            ],
+          },
+          {
+            text: "ไลบรารีที่ไม่เป็นทางการ",
+            items: [
+              {
+                text: "เกี่ยวกับไลบรารีที่ไม่เป็นทางการ",
+                link: "/th/unofficial/unofficial",
+                items: [
+                  { text: "C#", link: "https://github.com/Sylveon76/Nekos.Best-API" },
+                  { text: "Dart", link: "https://github.com/Yakiyo/nekos_best_dart" },
+                  { text: "Go", link: "https://github.com/Yakiyo/nekos_best.go" },
+                  { text: "Haskell", link: "https://github.com/xquantxz/nekos-best.hs" },
+                ],
+              },
+            ],
+          },
+          {
+            text: "ข้อกฎหมาย",
+            items: [
+              { text: "ข้อกำหนดในการให้บริการ", link: "/legal/tos" },
+              { text: "นโยบายความเป็นส่วนตัว", link: "/legal/privacy" },
+              { text: "แจ้งลบ DMCA", link: "/legal/dmca" },
+            ],
+          },
+        ],
+        lastUpdated: {
+          text: "อัปเดตล่าสุดเมื่อ",
+          formatOptions: { dateStyle: "long" },
+        },
+      },
+    },
+    hu: {
+      label: "Magyar",
+      lang: "hu",
+      title: "NEKOSBEST",
+      description: "A nekos.best hivatalos fejlesztői dokumentációja.",
+      themeConfig: {
+        nav: [
+          { text: "Kezdőlap", link: "/hu/" },
+          { text: "Állapotoldal", link: "https://status.nekos.best" },
+        ],
+        sidebar: [
+          {
+            text: "Első lépések",
+            items: [
+              { text: "Bevezetés", link: "/hu/getting-started/introduction" },
+              { text: "API végpontok", link: "/hu/getting-started/api-endpoints" },
+              { text: "API referencia", link: "/hu/getting-started/api-reference" },
+              { text: "Gyakran ismételt kérdések", link: "/hu/getting-started/faq" },
+            ],
+          },
+          {
+            text: "Közreműködés",
+            link: "/hu/contribute/contribute",
+            items: [
+              { text: "Képek és GIF-ek", link: "/hu/contribute/images-gifs" },
+              { text: "Kódpéldák", link: "/hu/contribute/code-examples" },
+              { text: "Nem hivatalos könyvtárak", link: "/hu/contribute/unofficial-libraries" },
+            ],
+          },
+          {
+            text: "Kódpéldák",
+            items: [
+              { text: "BDFD", link: "/hu/examples/bdfd" },
+              { text: "JavaScript", link: "/hu/examples/javascript" },
+              { text: "Python", link: "/hu/examples/python" },
+            ],
+          },
+          {
+            text: "Hivatalos könyvtárak",
+            items: [
+              { text: "JavaScript", link: "https://github.com/nekos-best/nekos-best.js" },
+              { text: "Python", link: "https://github.com/nekos-best/nekos-best.py" },
+              { text: "Rust", link: "https://github.com/nekos-best/nekos-best.rs" },
+            ],
+          },
+          {
+            text: "Nem hivatalos könyvtárak",
+            items: [
+              {
+                text: "A nem hivatalos könyvtárakról",
+                link: "/hu/unofficial/unofficial",
+                items: [
+                  { text: "C#", link: "https://github.com/Sylveon76/Nekos.Best-API" },
+                  { text: "Dart", link: "https://github.com/Yakiyo/nekos_best_dart" },
+                  { text: "Go", link: "https://github.com/Yakiyo/nekos_best.go" },
+                  { text: "Haskell", link: "https://github.com/xquantxz/nekos-best.hs" },
+                ],
+              },
+            ],
+          },
+          {
+            text: "Jogi információk",
+            items: [
+              { text: "Szolgáltatási feltételek", link: "/legal/tos" },
+              { text: "Adatvédelmi irányelvek", link: "/legal/privacy" },
+              { text: "DMCA eltávolítás", link: "/legal/dmca" },
+            ],
+          },
+        ],
+        lastUpdated: {
+          text: "Utoljára frissítve",
+          formatOptions: { dateStyle: "long" },
+        },
+      },
+    },
+    hi: {
+      label: "हिन्दी",
+      lang: "hi",
+      title: "NEKOSBEST",
+      description: "nekos.best का आधिकारिक डेवलपर डॉक्यूमेंटेशन।",
+      themeConfig: {
+        nav: [
+          { text: "होम", link: "/hi/" },
+          { text: "स्टेटस पेज", link: "https://status.nekos.best" },
+        ],
+        sidebar: [
+          {
+            text: "शुरुआत करें",
+            items: [
+              { text: "परिचय", link: "/hi/getting-started/introduction" },
+              { text: "API एंडपॉइंट्स", link: "/hi/getting-started/api-endpoints" },
+              { text: "API रेफरेंस", link: "/hi/getting-started/api-reference" },
+              { text: "अक्सर पूछे जाने वाले सवाल", link: "/hi/getting-started/faq" },
+            ],
+          },
+          {
+            text: "योगदान करें",
+            link: "/hi/contribute/contribute",
+            items: [
+              { text: "इमेज और GIF", link: "/hi/contribute/images-gifs" },
+              { text: "कोड उदाहरण", link: "/hi/contribute/code-examples" },
+              { text: "अनौपचारिक लाइब्रेरीज़", link: "/hi/contribute/unofficial-libraries" },
+            ],
+          },
+          {
+            text: "कोड उदाहरण",
+            items: [
+              { text: "BDFD", link: "/hi/examples/bdfd" },
+              { text: "JavaScript", link: "/hi/examples/javascript" },
+              { text: "Python", link: "/hi/examples/python" },
+            ],
+          },
+          {
+            text: "आधिकारिक लाइब्रेरीज़",
+            items: [
+              { text: "JavaScript", link: "https://github.com/nekos-best/nekos-best.js" },
+              { text: "Python", link: "https://github.com/nekos-best/nekos-best.py" },
+              { text: "Rust", link: "https://github.com/nekos-best/nekos-best.rs" },
+            ],
+          },
+          {
+            text: "अनौपचारिक लाइब्रेरीज़",
+            items: [
+              {
+                text: "अनौपचारिक लाइब्रेरीज़ के बारे में",
+                link: "/hi/unofficial/unofficial",
+                items: [
+                  { text: "C#", link: "https://github.com/Sylveon76/Nekos.Best-API" },
+                  { text: "Dart", link: "https://github.com/Yakiyo/nekos_best_dart" },
+                  { text: "Go", link: "https://github.com/Yakiyo/nekos_best.go" },
+                  { text: "Haskell", link: "https://github.com/xquantxz/nekos-best.hs" },
+                ],
+              },
+            ],
+          },
+          {
+            text: "कानूनी",
+            items: [
+              { text: "सेवा की शर्तें", link: "/legal/tos" },
+              { text: "गोपनीयता नीति", link: "/legal/privacy" },
+              { text: "DMCA टेकडाउन", link: "/legal/dmca" },
+            ],
+          },
+        ],
+        lastUpdated: {
+          text: "अंतिम अपडेट",
+          formatOptions: { dateStyle: "long" },
+        },
+      },
+    },
   },
 
   themeConfig: {
@@ -1356,7 +1581,7 @@ export default defineConfig({
       {
         text: "Legal",
         items: [
-          { text: "Terms and Conditions", link: "/legal/tos" },
+          { text: "Terms of Service", link: "/legal/tos" },
           { text: "Privacy Policy", link: "/legal/privacy" },
           { text: "DMCA Takedown", link: "/legal/dmca" },
         ],

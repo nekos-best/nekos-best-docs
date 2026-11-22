@@ -4,13 +4,13 @@ outline: [2, 3]
 
 # API Uç Noktaları
 
-## Temel URL (Base URL)
+## Temel URL
 
 ```
 https://nekos.best/api/:version
 ```
 
-`:version` kısmını aşağıdaki desteklenen sürümlerden biriyle değiştirin.
+`:version` kısmını aşağıda listelenen desteklenen sürümlerden biriyle değiştirin.
 
 ## Sürümler
 
@@ -22,19 +22,19 @@ https://nekos.best/api/:version
 
   <div class="versions-row">
     <div class="version-col"><span class="version-chip current">v2</span></div>
-    <div class="version-col">Güncel & Destekleniyor</div>
+    <div class="version-col">Güncel ve Destekleniyor</div>
   </div>
 </div>
 
-::: warning Önemli
-Herhangi bir istekte bulunmadan önce lütfen [User-Agent dokümantasyonunu](/tr/getting-started/api-reference.html#user-agent) okuyun. Tüm istekler doğru biçimlendirilmiş bir `User-Agent` başlığı içermelidir.
+::: tip
+İstek gönderirken özel bir `User-Agent` başlığı belirlemenizi öneririz. Önerilen biçim için [User-Agent dokümantasyonuna](/tr/getting-started/api-reference.html#user-agent) göz atın.
 :::
 
 ## Uç Noktalar
 
 ### <Badge type="tip" text="GET" class="http-get" /> /endpoints
 
-Mevcut tüm API kategorilerini ve bunlarla ilişkili dosya formatlarını döndürür.
+Mevcut tüm API kategorilerini ve bunlara karşılık gelen dosya biçimlerini döndürür.
 
 #### Örnek
 
@@ -48,7 +48,7 @@ https://nekos.best/api/v2/endpoints
 ```
 
 ::: tip
-Kategorileri koda sabit yazmak yerine desteklenen kategorileri dinamik olarak keşfetmek için bu uç noktayı kullanın.
+Desteklenen kategorileri koda sabit olarak yazmak yerine dinamik olarak almak için bu uç noktayı kullanın.
 :::
 
 ---
@@ -57,13 +57,13 @@ Kategorileri koda sabit yazmak yerine desteklenen kategorileri dinamik olarak ke
 
 Belirtilen kategoriden rastgele bir görsel veya GIF'i meta verileriyle birlikte döndürür.
 
-#### Sorgu Parametreleri (Query Parameters)
+#### Sorgu Parametreleri
 
-| İsim   | Tür    | Gerekli | Açıklama                                   |
-| ------ | ------ | ------- | ------------------------------------------ |
-| amount | number | Hayır   | Döndürülecek sonuç sayısı (`1 ≤ X ≤ 20`)   |
+| Ad     | Tür    | Zorunlu | Açıklama                                 |
+| ------ | ------ | ------- | ---------------------------------------- |
+| amount | number | Hayır   | Döndürülecek sonuç sayısı (`1 ≤ X ≤ 20`) |
 
-Belirtilmezse varsayılan olarak `1` değerini alır.
+Belirtilmediğinde varsayılan olarak `1` kullanılır.
 
 #### Örnek (tek sonuç)
 
@@ -117,16 +117,16 @@ https://nekos.best/api/v2/hug?amount=2
 
 ### <Badge type="tip" text="GET" class="http-get" /> /search
 
-Sanatçı isimleri veya kaynak başlıkları gibi meta verileri kullanarak görseller veya GIF'ler arasında arama yapın.
+Sanatçı adı veya kaynak başlığı gibi meta verilere göre görsel ya da GIF aramanızı sağlar.
 
-#### Sorgu Parametreleri (Query Parameters)
+#### Sorgu Parametreleri
 
-| İsim     | Tür    | Gerekli | Açıklama                          |
-| -------- | ------ | ------- | --------------------------------- |
-| query    | string | Evet    | Arama ifadesi                     |
-| type     | enum   | Evet    | `1` = görseller, `2` = GIF'ler    |
-| category | string | Hayır   | Sonuçları bir kategoriyle sınırla |
-| amount   | number | Hayır   | Sonuç sayısı (`1 ≤ X ≤ 20`)       |
+| Ad       | Tür    | Zorunlu | Açıklama                                |
+| -------- | ------ | ------- | --------------------------------------- |
+| query    | string | Evet    | Arama ifadesi                           |
+| type     | enum   | Evet    | `1` = görseller, `2` = GIF'ler          |
+| category | string | Hayır   | Sonuçları belirli bir kategoriyle sınırla |
+| amount   | number | Hayır   | Sonuç sayısı (`1 ≤ X ≤ 20`)             |
 
 #### Örnek (görsel araması)
 
@@ -180,18 +180,18 @@ https://nekos.best/api/v2/search?query=Generic&type=2&category=pat&amount=2
 
 ### <Badge type="tip" text="GET" class="http-get" /> /:category/:filename.:format
 
-Belirli bir dosyayı doğrudan alır.
+Belirli bir dosyayı doğrudan döndürür.
 
-#### Yol Parametreleri (Path Parameters)
+#### Yol Parametreleri
 
-| İsim     | Açıklama                   |
-| -------- | -------------------------- |
-| category | Kategori adı               |
-| filename | Öğe dosya adı (UUID)       |
-| format   | Dosya formatı (`png`, `gif`)|
+| Ad       | Açıklama                     |
+| -------- | ---------------------------- |
+| category | Kategori adı                 |
+| filename | Dosya adı (UUID)             |
+| format   | Dosya biçimi (`png`, `gif`)  |
 
 ::: info
-Bu uç nokta için meta veriler **URL ile kodlanmış HTTP yanıt başlıkları** aracılığıyla döndürülür.
+Bu uç noktanın meta verileri **URL kodlu HTTP yanıt başlıkları** üzerinden döndürülür.
 :::
 
 **Mevcut başlıklar:**
@@ -205,4 +205,4 @@ Bu uç nokta için meta veriler **URL ile kodlanmış HTTP yanıt başlıkları*
 
 https://nekos.best/api/v2/hug/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.gif
 
-**Yanıt:** İkili görsel veya GIF verisi
+**Yanıt:** İkili (binary) görsel veya GIF verisi

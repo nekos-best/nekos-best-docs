@@ -10,7 +10,7 @@ outline: [2, 3]
 https://nekos.best/api/:version
 ```
 
-將 `:version` 替換為下方支援的版本之一。
+請將 `:version` 替換為下方支援的版本之一。
 
 ## 版本
 
@@ -22,19 +22,19 @@ https://nekos.best/api/:version
 
   <div class="versions-row">
     <div class="version-col"><span class="version-chip current">v2</span></div>
-    <div class="version-col">當前版本與持續維護</div>
+    <div class="version-col">目前版本・持續維護中</div>
   </div>
 </div>
 
-::: warning 重要
-在發送任何請求之前，請閱讀 [User-Agent 文件](/zh-TW/getting-started/api-reference.html#user-agent)。所有請求都必須包含格式正確的 `User-Agent` 標頭。
+::: tip
+建議在發送請求時設定自訂的 `User-Agent` 標頭。建議格式請參閱 [User-Agent 文件](/zh-TW/getting-started/api-reference.html#user-agent)。
 :::
 
 ## 端點
 
 ### <Badge type="tip" text="GET" class="http-get" /> /endpoints
 
-傳回所有可用的 API 分類及其關聯的檔案格式。
+回傳所有可用的 API 分類以及對應的檔案格式。
 
 #### 範例
 
@@ -48,24 +48,24 @@ https://nekos.best/api/v2/endpoints
 ```
 
 ::: tip
-建議使用此端點動態探索支援的分類，而不是將分類寫死（hardcode）在程式碼中。
+建議透過這個端點動態取得支援的分類，而不是將分類寫死（hardcode）在程式碼裡。
 :::
 
 ---
 
 ### <Badge type="tip" text="GET" class="http-get" /> /:category
 
-傳回指定分類中的隨機圖片或 GIF，並包含元資料（metadata）。
+從指定分類隨機回傳圖片或 GIF，並附帶中繼資料（metadata）。
 
 #### 查詢參數
 
-| 名稱   | 類型   | 必填 | 說明                                |
-| ------ | ------ | ---- | ----------------------------------- |
-| amount | number | 否   | 要傳回的結果數量 (`1 ≤ X ≤ 20`)     |
+| 名稱   | 型別   | 必填 | 說明                           |
+| ------ | ------ | ---- | ------------------------------ |
+| amount | number | 否   | 要回傳的結果數量（`1 ≤ X ≤ 20`） |
 
 若未指定，預設為 `1`。
 
-#### 範例 (單一結果)
+#### 範例（單一結果）
 
 https://nekos.best/api/v2/neko
 
@@ -86,7 +86,7 @@ https://nekos.best/api/v2/neko
 }
 ```
 
-#### 範例 (多個結果)
+#### 範例（多筆結果）
 
 https://nekos.best/api/v2/hug?amount=2
 
@@ -117,18 +117,18 @@ https://nekos.best/api/v2/hug?amount=2
 
 ### <Badge type="tip" text="GET" class="http-get" /> /search
 
-使用繪師名稱或作品名稱等元資料搜尋圖片或 GIF。
+根據繪師名稱或作品名稱等中繼資料搜尋圖片或 GIF。
 
 #### 查詢參數
 
-| 名稱     | 類型   | 必填 | 說明                             |
-| -------- | ------ | ---- | -------------------------------- |
-| query    | string | 是   | 搜尋字詞                         |
-| type     | enum   | 是   | `1` = 圖片, `2` = GIF            |
-| category | string | 否   | 將結果限制在特定分類             |
-| amount   | number | 否   | 結果數量 (`1 ≤ X ≤ 20`)          |
+| 名稱     | 型別   | 必填 | 說明                       |
+| -------- | ------ | ---- | -------------------------- |
+| query    | string | 是   | 搜尋關鍵字                 |
+| type     | enum   | 是   | `1` = 圖片，`2` = GIF      |
+| category | string | 否   | 將搜尋結果限定於特定分類   |
+| amount   | number | 否   | 結果數量（`1 ≤ X ≤ 20`）   |
 
-#### 範例 (圖片搜尋)
+#### 範例（搜尋圖片）
 
 https://nekos.best/api/v2/search?query=John&type=1
 
@@ -149,7 +149,7 @@ https://nekos.best/api/v2/search?query=John&type=1
 }
 ```
 
-#### 範例 (指定分類的 GIF 搜尋)
+#### 範例（指定分類搜尋 GIF）
 
 https://nekos.best/api/v2/search?query=Generic&type=2&category=pat&amount=2
 
@@ -180,18 +180,18 @@ https://nekos.best/api/v2/search?query=Generic&type=2&category=pat&amount=2
 
 ### <Badge type="tip" text="GET" class="http-get" /> /:category/:filename.:format
 
-直接取得特定的資源檔案。
+直接取得指定的資源檔案。
 
 #### 路徑參數
 
-| 名稱     | 說明                        |
-| -------- | --------------------------- |
-| category | 分類名稱                    |
-| filename | 資源檔名 (UUID)             |
-| format   | 檔案格式 (`png`, `gif`)     |
+| 名稱     | 說明                    |
+| -------- | ----------------------- |
+| category | 分類名稱                |
+| filename | 資源檔名（UUID）        |
+| format   | 檔案格式（`png`, `gif`） |
 
 ::: info
-此端點的元資料會透過 **URL 編碼的 HTTP 回應標頭** 傳回。
+此端點的中繼資料會透過 **URL 編碼的 HTTP 回應標頭** 回傳。
 :::
 
 **可用的回應標頭：**
@@ -205,4 +205,4 @@ https://nekos.best/api/v2/search?query=Generic&type=2&category=pat&amount=2
 
 https://nekos.best/api/v2/hug/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.gif
 
-**回應：** 二進位圖片或 GIF 資料
+**回應：** 圖片或 GIF 的二進位資料

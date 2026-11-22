@@ -2,9 +2,8 @@
 layout: home
 
 hero:
-  name: "NEKOSBEST
-TÀI LIỆU API"
-  tagline: Tài liệu nhà phát triển chính thức của NEKOSBEST.
+  name: "NEKOSBEST\nTÀI LIỆU API"
+  tagline: Tài liệu dành cho lập trình viên chính thức của NEKOSBEST.
   actions:
     - theme: brand
       text: Bắt đầu
@@ -24,17 +23,17 @@ TÀI LIỆU API"
     <a class="feature-card feature-card-link" href="/vi/getting-started/introduction">
       <img src="/icons/person.svg" alt="Giới thiệu" />
       <h3>Giới thiệu</h3>
-      <p>Chúng tôi là ai và các tính năng phổ biến nhất của chúng tôi.</p>
+      <p>Tìm hiểu về chúng tôi và những tính năng nổi bật nhất.</p>
     </a>
     <a class="feature-card feature-card-link" href="/vi/getting-started/api-endpoints">
       <img src="/icons/http.svg" alt="Endpoint API" />
       <h3>Endpoint API</h3>
-      <p>Tất cả các endpoint, tham số, định dạng phản hồi và ví dụ đầu ra.</p>
+      <p>Toàn bộ endpoint, tham số, định dạng phản hồi và ví dụ đầu ra.</p>
     </a>
     <a class="feature-card feature-card-link" href="/vi/getting-started/faq">
       <img src="/icons/question_mark.svg" alt="Câu hỏi thường gặp" />
       <h3>Câu hỏi thường gặp</h3>
-      <p>Một số câu hỏi thường gặp nhất từ người dùng.</p>
+      <p>Giải đáp những thắc mắc phổ biến nhất khi sử dụng API.</p>
     </a>
   </div>
 
@@ -42,7 +41,7 @@ TÀI LIỆU API"
     <a class="feature-card feature-card-link" href="/legal/tos">
       <img src="/icons/gavel.svg" alt="Điều khoản dịch vụ" />
       <h3>Điều khoản dịch vụ</h3>
-      <p>Các quy tắc và điều kiện cơ bản khi sử dụng trang web và dịch vụ của chúng tôi.</p>
+      <p>Các quy định và điều khoản cơ bản khi sử dụng trang web và dịch vụ của chúng tôi.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="Chính sách bảo mật" />

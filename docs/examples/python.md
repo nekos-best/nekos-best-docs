@@ -4,11 +4,7 @@
 ```py
 import requests
 
-headers = {
-    "User-Agent": "NekosBest (https://example.com)"
-}
-
-resp = requests.get("https://nekos.best/api/v2/neko", headers=headers)
+resp = requests.get("https://nekos.best/api/v2/neko")
 data = resp.json()
 print(data["results"][0]["url"])
 
@@ -19,11 +15,7 @@ print(data["results"][0]["url"])
 ```py
 import aiohttp
 
-headers = {
-    "User-Agent": "NekosBest (https://example.com)"
-}
-
-async with aiohttp.ClientSession(headers=headers) as session:
+async with aiohttp.ClientSession() as session:
     async with session.get("https://nekos.best/api/v2/neko") as resp:
         data = await resp.json()
         print(data["results"][0]["url"])

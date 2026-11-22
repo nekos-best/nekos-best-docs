@@ -6,66 +6,66 @@ lastUpdated: false
 
 ## 关于我们
 
-你好，欢迎使用 **NEKOSBEST** 的开发者文档。
+你好，欢迎来到 **NEKOSBEST** 开发者文档。
 
-我们自 **2021 年 2 月**起开始运营，致力于提供全类别、高质量、全年龄段友好（SFW）且极低延迟的动漫图片与 GIF 动图 API 服务。
+我们自 **2021 年 2 月**起持续运营，以低延迟提供涵盖各类主题的高质量、全年龄友好（SFW）动漫图片与 GIF。
 
 ## 核心特性
 
 <div class="feature-grid">
 
   <div class="feature-card">
-    <img src="/icons/key_off.svg" alt="无需身份验证" />
-    <h3>无需身份验证</h3>
-    <p>无需 API 密钥或 Token，直接发送 HTTP 请求即可。</p>
+    <img src="/icons/key_off.svg" alt="无需鉴权" />
+    <h3>无需鉴权</h3>
+    <p>不需要 Token 或 API 密钥，直接发送请求即可使用。</p>
   </div>
 
   <div class="feature-card">
-    <img src="/icons/sfw.svg" alt="完全 SFW（适合工作场所）" />
-    <h3>完全 SFW（全年龄段）</h3>
-    <p>所有图片与 GIF 均经过严格筛选，完全适合工作场所。</p>
+    <img src="/icons/sfw.svg" alt="完全 SFW" />
+    <h3>完全 SFW</h3>
+    <p>所有图片和 GIF 均符合安全工作环境（SFW）标准。</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/stylus_fountain_pen.svg" alt="标注原作者" />
     <h3>标注原作者</h3>
-    <p>在可行的情况下，均附带画师与原始来源链接信息。</p>
+    <p>在信息可用的情况下，均会提供画师及作品来源信息。</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/money_off.svg" alt="完全免费" />
     <h3>完全免费</h3>
-    <p>100% 免费使用，没有任何付费墙或 VIP 订阅限制。</p>
+    <p>完全免费开放使用，没有任何付费墙或会员分级。</p>
   </div>
 
   <div class="feature-card">
-    <img src="/icons/bolt.svg" alt="高速与高可靠" />
-    <h3>高速与高可靠</h3>
-    <p>高可用性架构与极低延迟的 HTTP 响应。</p>
+    <img src="/icons/bolt.svg" alt="高速且可靠" />
+    <h3>高速且可靠</h3>
+    <p>高可用性、低延迟响应，以及轻量优化的 GIF（平均约 900 KB）。</p>
   </div>
 
   <div class="feature-card">
-    <img src="/icons/burst_mode.svg" alt="丰富多样端点" />
-    <h3>丰富多样端点</h3>
-    <p>共有 4 个图片端点和 59 个 GIF 端点，并将持续增加。</p>
+    <img src="/icons/burst_mode.svg" alt="丰富的端点" />
+    <h3>丰富的端点</h3>
+    <p>涵盖 4 个图片端点与 59 个 GIF 端点，提供 5,000+ 资源，并持续扩充中。</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/desktop_cloud.svg" alt="支持 CORS" />
     <h3>支持 CORS</h3>
-    <p>跨域已开启，可直接用于前端和浏览器项目。</p>
+    <p>开箱即用，可直接接入浏览器端项目。</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/groups.svg" alt="社区驱动" />
     <h3>社区驱动</h3>
-    <p>随时欢迎提交意见、反馈与新功能建议。</p>
+    <p>随时欢迎你的反馈与建议。</p>
   </div>
 
 </div>
 
-## 技术支持、建议与反馈
+## 支持、建议与反馈
 
-如果您在 API 使用过程中需要帮助，欢迎随时加入我们的 [Discord 服务器](https://nekos.best/discord?ref=docs)。
+如果你在使用 API 时需要帮助，欢迎随时加入我们的 [Discord 服务器](https://nekos.best/discord?ref=docs)。
 
-非常欢迎各种反馈与建议；您可以通过 Discord 服务器或发送 [Email](mailto:contact@nekos.best) 与我们取得联系。
+我们非常欢迎各类建议与反馈，你可以通过 Discord 服务器或发送[邮件](mailto:contact@nekos.best)与我们联系。

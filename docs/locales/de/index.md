@@ -2,8 +2,8 @@
 layout: home
 
 hero:
-  name: "NEKOSBEST\nAPI DOKUMENTATION"
-  tagline: Offizielle NEKOSBEST Entwicklerdokumentation.
+  name: "NEKOSBEST\nAPI-DOKUMENTATION"
+  tagline: Offizielle Entwicklerdokumentation für NEKOSBEST.
   actions:
     - theme: brand
       text: Erste Schritte
@@ -23,7 +23,7 @@ hero:
     <a class="feature-card feature-card-link" href="/de/getting-started/introduction">
       <img src="/icons/person.svg" alt="Einführung" />
       <h3>Einführung</h3>
-      <p>Wer wir sind und unsere beliebtesten Funktionen.</p>
+      <p>Wer wir sind und was unsere API auszeichnet.</p>
     </a>
     <a class="feature-card feature-card-link" href="/de/getting-started/api-endpoints">
       <img src="/icons/http.svg" alt="API-Endpunkte" />
@@ -33,7 +33,7 @@ hero:
     <a class="feature-card feature-card-link" href="/de/getting-started/faq">
       <img src="/icons/question_mark.svg" alt="Häufig gestellte Fragen" />
       <h3>Häufig gestellte Fragen</h3>
-      <p>Einige der am häufigsten gestellten Fragen.</p>
+      <p>Antworten auf die am häufigsten gestellten Fragen.</p>
     </a>
   </div>
 
@@ -46,12 +46,12 @@ hero:
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="Datenschutzrichtlinie" />
       <h3>Datenschutzrichtlinie</h3>
-      <p>Wie wir Ihre personenbezogenen Daten erheben, verwenden, speichern und schützen.</p>
+      <p>Wie wir deine personenbezogenen Daten erheben, verwenden, speichern und schützen.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/dmca">
       <img src="/icons/bid_landscape_disabled.svg" alt="DMCA-Takedown" />
       <h3>DMCA-Takedown</h3>
-      <p>Verfahren zur Einreichung von Urheberrechtsbeschwerden und Anträgen auf Entfernung von Inhalten.</p>
+      <p>Wie du Urheberrechtsverletzungen meldest und die Entfernung von Inhalten beantragst.</p>
     </a>
   </div>
   

@@ -4,54 +4,57 @@ outline: [2, 3]
 
 # Riferimento API
 
-## Limiti di Frequenza (Rate Limits)
+## Rate limit
 
-Ogni risposta include le seguenti intestazioni per aiutarti a tracciare e rispettare i limiti di frequenza:
+Ogni risposta include i seguenti header per aiutarti a monitorare e rispettare i rate limit:
 
-| Intestazione            | Descrizione                                              |
-| ----------------------- | -------------------------------------------------------- |
-| `x-rate-limit-limit`    | Durata della finestra corrente del limite di frequenza (es. `1m`) |
-| `x-rate-limit-remaining`| Richieste rimanenti nella finestra corrente                 |
-| `x-rate-limit-reset`    | Timestamp ISO 8601 del ripristino della finestra corrente |
+| Header                   | Descrizione                                                    |
+| ------------------------ | -------------------------------------------------------------- |
+| `x-rate-limit-limit`     | Durata della finestra di rate limit corrente (es. `1m`)        |
+| `x-rate-limit-remaining` | Richieste rimanenti nella finestra corrente                    |
+| `x-rate-limit-reset`     | Timestamp ISO 8601 del ripristino della finestra corrente      |
 
 ### Limiti
 
-| Endpoint      | Limite                                      |
-| ------------- | ------------------------------------------- |
-| `/search`     | 7 richieste ogni 5 secondi                  |
-| `/:category`  | 200 richieste al minuto (per categoria)     |
+| Endpoint                       | Limite                                                          |
+| ------------------------------ | --------------------------------------------------------------- |
+| `/search`                      | 7 richieste ogni 5 secondi                                      |
+| `/:category`                   | 200 richieste al minuto (per categoria)                         |
+| `/:category/:filename.:format` | 200 richieste al minuto (condivise tra risorse `.png` e `.gif`) |
 
 ## User-Agent
 
-Tutte le richieste devono includere un'intestazione `User-Agent`. Si prega di utilizzare il seguente formato: `NOME_APP (INFO_CONTATTO)`.\
+Sebbene un header `User-Agent` personalizzato non sia obbligatorio, consigliamo di impostarne uno nelle tue richieste usando questo formato: `NOME_APP (INFO_CONTATTO)`.\
 Ad esempio: `NekoApp (https://example.com)` o `NekoApp (dev@example.com)`
 
-**Linee guida per la denominazione:**
+**Consigli per la denominazione:**
 
-* **Sii specifico:** Non utilizzare nomi generici come "Discord Bot", "WhatsApp Bot" o "Telegram Bot". La tua applicazione deve avere un nome univoco.
-* **Evita segnaposto:** Non utilizzare stringhe come `test`, `bot` o il valore di esempio sopra riportato.
-* **Nessun valore predefinito delle librerie:** Evita di utilizzare le stringhe predefinite delle librerie come `python-requests`, `okhttp`, `axios`, `node` o `Go-http-client`.
+* **Sii specifico:** Usa il nome reale della tua applicazione invece di etichette generiche come "Discord Bot", "WhatsApp Bot" o "Telegram Bot".
+* **Evita segnaposto:** Evita valori generici come `test`, `bot` o gli esempi riportati sopra.
+* **Evita i valori predefiniti delle librerie:** Preferisci un valore personalizzato alle stringhe predefinite come `python-requests`, `okhttp`, `axios`, `node` o `Go-http-client`.
 
 **Opzioni per le informazioni di contatto:**\
-Le informazioni di contatto non devono necessariamente essere un sito web tradizionale. Ciascuno dei seguenti è un modo accettabile per fornire l'identificazione:
+Le informazioni di contatto non devono essere necessariamente un sito web classico. Qualsiasi opzione seguente va bene:
 
-* Un indirizzo email di contatto diretto.
-* Un sito web del progetto o un URL di repository **pubblico** (es. GitHub, GitLab).
-* Un link di invito per bot o una pagina di esplorazione.
-* Un URL di elenco (es. top.gg o directory simili).
+* Un indirizzo e-mail di contatto diretto.
+* Il sito web del progetto o l'URL di un repository **pubblico** (es. GitHub, GitLab).
+* Un link di invito del bot o una pagina di presentazione.
+* L'URL di una directory o lista (es. top.gg o simili).
 
-**Falsificazione e Impersonificazione:**
+**Spoofing e impersonificazione:**
 
-* **Non falsificare le stringhe del browser.** Il formato `Mozilla/5.0 ...` è strettamente riservato ai veri browser web e ai bot verificati da Cloudflare.
+* **Non falsificare le stringhe dei browser.** Il formato `Mozilla/5.0 ...` è riservato ai veri browser web e ai bot verificati da Cloudflare.
 * **Non impersonare crawler noti** come `Googlebot` o `Bingbot`.
 
-*Il mancato rispetto di queste linee guida e l'uso di valori generici, predefiniti o falsificati comporteranno molto probabilmente il blocco delle tue richieste.*
+::: info
+Non impostare un header `User-Agent` personalizzato aumenta la probabilità di essere segnalato o bannato dal nostro sistema automatico di rilevamento degli abusi (`NB-BCFSD`).
+:::
 
 ## Categorie
 
 Le categorie definiscono il tipo di contenuto restituito dall'API. Ogni categoria corrisponde a un formato di file fisso.
 
-### Immagini
+### Immagini (4)
 
 <div class="category-grid">
   <span class="category-chip">husbando</span>
@@ -60,7 +63,7 @@ Le categorie definiscono il tipo di contenuto restituito dall'API. Ogni categori
   <span class="category-chip">waifu</span>
 </div>
 
-### GIF
+### GIF (59)
 
 <div class="category-grid">
   <span class="category-chip">angry</span>
@@ -124,11 +127,11 @@ Le categorie definiscono il tipo di contenuto restituito dall'API. Ogni categori
   <span class="category-chip">yeet</span>
 </div>
 
-### Campi della Risposta
+### Campi della risposta
 
-| Tipo   | Campi                                       |
-| ------ | ------------------------------------------- |
-| Immagini | `artist_name`, `artist_href`, `source_url`  |
-| GIF    | `anime_name`                                |
+| Tipo     | Campi                                      |
+| -------- | ------------------------------------------ |
+| Immagini | `artist_name`, `artist_href`, `source_url` |
+| GIF      | `anime_name`                               |
 
-`url` e `dimensions` sono inclusi in entrambi.
+`url` e `dimensions` sono inclusi in entrambi i casi.

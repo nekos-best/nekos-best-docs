@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "NEKOSBEST\nتوثيق واجهة البرمجة"
-  tagline: التوثيق الرسمي للمطورين لـ NEKOSBEST.
+  tagline: التوثيق الرسمي لمطوري NEKOSBEST.
   actions:
     - theme: brand
       text: البدء
@@ -28,7 +28,7 @@ hero:
     <a class="feature-card feature-card-link" href="/ar/getting-started/api-endpoints">
       <img src="/icons/http.svg" alt="نقاط نهاية API" />
       <h3>نقاط نهاية API</h3>
-      <p>جميع نقاط النهاية، المعلمات، صيغ الاستجابة وأمثلة المخرجات.</p>
+      <p>جميع نقاط النهاية والمعلمات وصيغ الاستجابة وأمثلة المخرجات.</p>
     </a>
     <a class="feature-card feature-card-link" href="/ar/getting-started/faq">
       <img src="/icons/question_mark.svg" alt="الأسئلة الشائعة" />
@@ -39,19 +39,19 @@ hero:
 
   <div class="feature-grid home-grid-3">
     <a class="feature-card feature-card-link" href="/legal/tos">
-      <img src="/icons/gavel.svg" alt="الشروط والأحكام" />
-      <h3>الشروط والأحكام</h3>
+      <img src="/icons/gavel.svg" alt="شروط الخدمة" />
+      <h3>شروط الخدمة</h3>
       <p>القواعد والشروط الأساسية لاستخدام موقعنا وخدماتنا.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/privacy">
       <img src="/icons/policy.svg" alt="سياسة الخصوصية" />
       <h3>سياسة الخصوصية</h3>
-      <p>كيف نجمع ونستخدم ونخزن ونحمي بياناتك ومعلوماتك الشخصية.</p>
+      <p>كيف نجمع بياناتك ومعلوماتك الشخصية ونستخدمها ونخزنها ونحميها.</p>
     </a>
     <a class="feature-card feature-card-link" href="/legal/dmca">
       <img src="/icons/bid_landscape_disabled.svg" alt="إشعار DMCA" />
       <h3>إشعار DMCA</h3>
-      <p>إجراءات تقديم مطالبات انتهاك حقوق الطبع والنشر وطلبات إزالة المحتوى.</p>
+      <p>إجراءات تقديم بلاغات انتهاك حقوق النشر وطلبات إزالة المحتوى.</p>
     </a>
   </div>
   

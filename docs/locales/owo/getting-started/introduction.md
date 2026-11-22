@@ -21,8 +21,8 @@ We've been active since **Febwuawy 2021** and sewve high quawity, famiwy fwiendw
   </div>
 
   <div class="feature-card">
-    <img src="/icons/sfw.svg" alt="Fuwky SFW" />
-    <h3>Fuwky SFW OwO</h3>
+    <img src="/icons/sfw.svg" alt="Fuwwy SFW" />
+    <h3>Fuwwy SFW OwO</h3>
     <p>Aww images and GIFs awe safe fow wowk nya~!</p>
   </div>
 
@@ -34,20 +34,20 @@ We've been active since **Febwuawy 2021** and sewve high quawity, famiwy fwiendw
 
   <div class="feature-card">
     <img src="/icons/money_off.svg" alt="Fwee" />
-    <h3>Fuwky Fwee UwU</h3>
+    <h3>Fuwwy Fwee UwU</h3>
     <p>Compwetewy fwee to use, with no paywawws ow pwemium tiews nya~!</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/bolt.svg" alt="Fast & wewiabwe" />
     <h3>Fast & wewiabwe >w<</h3>
-    <p>High uptime and wow-watency wesponses OwO.</p>
+    <p>High uptime, wow-watency wesponses, and smaww, optimized GIFs (~900 KB avg) OwO.</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/burst_mode.svg" alt="Wide vawiety of endpoints" />
     <h3>Wide vawiety of endpoints nya~</h3>
-    <p>A totaw of 4 images and 59 GIF endpoints with mowe pwanned x3!</p>
+    <p>5,000+ assets acwoss 4 image and 59 GIF endpoints, with mowe pwanned x3!</p>
   </div>
 
   <div class="feature-card">

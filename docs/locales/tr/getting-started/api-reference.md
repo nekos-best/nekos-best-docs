@@ -4,54 +4,57 @@ outline: [2, 3]
 
 # API Referansı
 
-## İstek Sınırlamaları (Rate Limits)
+## İstek Sınırları (Rate Limits)
 
-Her yanıt, istek sınırlarını takip etmenize ve bunlara uymanıza yardımcı olmak için aşağıdaki başlıkları içerir:
+Her yanıt, istek sınırlarını takip edip yönetebilmeniz için aşağıdaki başlıkları içerir:
 
-| Başlık                  | Açıklama                                                 |
-| ----------------------- | -------------------------------------------------------- |
-| `x-rate-limit-limit`    | Mevcut istek sınırı penceresinin süresi (ör. `1m`)       |
-| `x-rate-limit-remaining`| Mevcut pencerede kalan istek sayısı                      |
-| `x-rate-limit-reset`    | Mevcut pencerenin sıfırlanacağı ISO 8601 zaman damgası   |
+| Başlık                   | Açıklama                                                   |
+| ------------------------ | ---------------------------------------------------------- |
+| `x-rate-limit-limit`     | Mevcut istek sınırı penceresinin süresi (ör. `1m`)         |
+| `x-rate-limit-remaining` | Mevcut pencerede kalan istek sayısı                        |
+| `x-rate-limit-reset`     | Mevcut pencerenin sıfırlanacağı ISO 8601 zaman damgası     |
 
 ### Sınırlar
 
-| Uç Nokta      | Sınır                                       |
-| ------------- | ------------------------------------------- |
-| `/search`     | 5 saniyede 7 istek                          |
-| `/:category`  | Dakikada 200 istek (kategori başına)        |
+| Uç Nokta                       | Sınır                                                   |
+| ------------------------------ | ------------------------------------------------------- |
+| `/search`                      | 5 saniyede 7 istek                                      |
+| `/:category`                   | Dakikada 200 istek (kategori başına)                    |
+| `/:category/:filename.:format` | Dakikada 200 istek (`.png` ve `.gif` dosyaları için ortak) |
 
 ## User-Agent
 
-Tüm istekler bir `User-Agent` başlığı içermelidir. Lütfen şu formatı kullanın: `UYGULAMA_ADI (İLETİŞİM_BİLGİSİ)`.\
+Özel bir `User-Agent` başlığı zorunlu olmasa da isteklerinizde şu biçimi kullanarak bir değer belirlemenizi öneririz: `UYGULAMA_ADI (İLETİŞİM_BİLGİSİ)`.\
 Örneğin: `NekoApp (https://example.com)` veya `NekoApp (dev@example.com)`
 
-**İsimlendirme Kuralları:**
+**Önerilen İsimlendirme Kuralları:**
 
-* **Belirli olun:** "Discord Bot", "WhatsApp Bot" veya "Telegram Bot" gibi genel isimler kullanmayın. Uygulamanızın kendine özgü bir adı olmalıdır.
-* **Yer tutuculardan kaçının:** `test`, `bot` veya yukarıdaki örnek değerler gibi dizeleri kullanmayın.
-* **Varsayılan kütüphane değerlerini kullanmayın:** `python-requests`, `okhttp`, `axios`, `node` veya `Go-http-client` gibi varsayılan kütüphane ifadelerini kullanmaktan kaçının.
+* **Belirgin olun:** "Discord Bot", "WhatsApp Bot" veya "Telegram Bot" gibi genel ifadeler yerine uygulamanızın kendi adını kullanın.
+* **Yer tutuculardan kaçının:** `test`, `bot` veya yukarıdaki örnek değerler gibi şablon metinleri kullanmaktan kaçının.
+* **Kütüphane varsayılanlarını kullanmayın:** `python-requests`, `okhttp`, `axios`, `node` veya `Go-http-client` gibi varsayılan kütüphane dizeleri yerine özel bir değer tercih edin.
 
 **İletişim Bilgisi Seçenekleri:**\
-İletişim bilgisinin geleneksel bir web sitesi olması zorunlu değildir. Aşağıdakilerden herhangi biri geçerli kimlik sağlama yöntemleridir:
+İletişim bilgisinin klasik bir web sitesi olması gerekmez. Aşağıdakilerden herhangi biri uygundur:
 
 * Doğrudan bir iletişim e-posta adresi.
-* Proje web sitesi veya **herkese açık** depo URL'si (ör. GitHub, GitLab).
-* Bot davet bağlantısı veya tanıtım sayfası.
-* Bir liste URL'si (ör. top.gg veya benzeri dizinler).
+* Proje web sitesi veya **herkese açık** bir depo URL'si (ör. GitHub, GitLab).
+* Bot davet bağlantısı veya keşif sayfası.
+* Bir dizin listeleme URL'si (ör. top.gg veya benzeri dizinler).
 
 **Taklit ve Kimliğe Bürünme:**
 
-* **Tarayıcı dizelerini taklit etmeyin.** `Mozilla/5.0 ...` formatı yalnızca gerçek web tarayıcıları ve Cloudflare tarafından doğrulanmış botlar için ayrılmıştır.
+* **Tarayıcı dizelerini taklit etmeyin.** `Mozilla/5.0 ...` biçimi yalnızca gerçek web tarayıcıları ve Cloudflare tarafından doğrulanmış botlar için ayrılmıştır.
 * **`Googlebot` veya `Bingbot` gibi bilinen arama motoru botlarının kimliğine bürünmeyin.**
 
-*Bu kurallara uymamak ve genel, varsayılan veya taklit değerler kullanmak büyük olasılıkla isteklerinizin engellenmesiyle sonuçlanacaktır.*
+::: info
+Özel bir `User-Agent` başlığı belirtmemek, otomatik kötüye kullanım algılama sistemimiz (`NB-BCFSD`) tarafından işaretlenme veya engellenme olasılığını artırır.
+:::
 
 ## Kategoriler
 
-Kategoriler, API tarafından döndürülen içerik türünü tanımlar. Her kategori sabit bir dosya formatıyla eşleşir.
+Kategoriler, API tarafından döndürülen içerik türünü belirler. Her kategori sabit bir dosya biçimiyle eşleşir.
 
-### Görseller
+### Görseller (4)
 
 <div class="category-grid">
   <span class="category-chip">husbando</span>
@@ -60,7 +63,7 @@ Kategoriler, API tarafından döndürülen içerik türünü tanımlar. Her kate
   <span class="category-chip">waifu</span>
 </div>
 
-### GIF'ler
+### GIF'ler (59)
 
 <div class="category-grid">
   <span class="category-chip">angry</span>
@@ -126,9 +129,9 @@ Kategoriler, API tarafından döndürülen içerik türünü tanımlar. Her kate
 
 ### Yanıt Alanları
 
-| Tür      | Alanlar                                     |
-| -------- | ------------------------------------------- |
-| Görseller| `artist_name`, `artist_href`, `source_url`  |
-| GIF'ler  | `anime_name`                                |
+| Tür       | Alanlar                                    |
+| --------- | ------------------------------------------ |
+| Görseller | `artist_name`, `artist_href`, `source_url` |
+| GIF'ler   | `anime_name`                               |
 
-`url` ve `dimensions` alanları her iki türde de mevcuttur.
+`url` ve `dimensions` alanları her iki türde de yer alır.

@@ -6,9 +6,9 @@ lastUpdated: false
 
 ## Tentang kami
 
-Halo dan selamat datang di dokumentasi pengembang **NEKOSBEST**. 
+Halo dan selamat datang di dokumentasi developer **NEKOSBEST**.
 
-Kami telah aktif sejak **Februari 2021** dan menyediakan gambar & GIF anime berkualitas tinggi serta aman untuk keluarga dalam berbagai kategori dengan latensi rendah.
+Kami telah beroperasi sejak **Februari 2021** dan menyajikan gambar serta GIF anime berkualitas tinggi yang ramah keluarga dari beragam kategori dengan latensi rendah.
 
 ## Fitur unggulan kami
 
@@ -17,55 +17,55 @@ Kami telah aktif sejak **Februari 2021** dan menyediakan gambar & GIF anime berk
   <div class="feature-card">
     <img src="/icons/key_off.svg" alt="Tanpa otorisasi" />
     <h3>Tanpa otorisasi</h3>
-    <p>Tidak memerlukan token atau kunci API. Cukup kirimkan permintaan.</p>
+    <p>Tidak perlu token atau API key. Langsung kirim request saja.</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/sfw.svg" alt="Sepenuhnya SFW" />
     <h3>Sepenuhnya SFW</h3>
-    <p>Semua gambar dan GIF aman untuk tempat kerja (Safe For Work).</p>
+    <p>Semua gambar dan GIF aman untuk dilihat di mana saja (Safe For Work).</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/stylus_fountain_pen.svg" alt="Kredit kreator" />
     <h3>Kredit kreator</h3>
-    <p>Informasi seniman dan sumber disediakan jika tersedia.</p>
+    <p>Informasi ilustrator dan sumber karya disertakan jika tersedia.</p>
   </div>
 
   <div class="feature-card">
-    <img src="/icons/money_off.svg" alt="Gratis" />
+    <img src="/icons/money_off.svg" alt="Sepenuhnya Gratis" />
     <h3>Sepenuhnya Gratis</h3>
-    <p>Sepenuhnya gratis digunakan, tanpa paywall atau tingkatan premium.</p>
+    <p>Gratis digunakan sepenuhnya, tanpa paywall maupun paket berbayar.</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/bolt.svg" alt="Cepat & andal" />
     <h3>Cepat & andal</h3>
-    <p>Waktu aktif (uptime) tinggi dan respons berlatensi rendah.</p>
+    <p>Uptime tinggi, respons berlatensi rendah, serta file GIF kecil yang teroptimasi (rata-rata ~900 KB).</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/burst_mode.svg" alt="Beragam endpoint" />
     <h3>Beragam endpoint</h3>
-    <p>Total 4 endpoint gambar dan 59 GIF, dan lebih banyak lagi sedang direncanakan.</p>
+    <p>5.000+ aset di 4 endpoint gambar dan 59 endpoint GIF, dengan lebih banyak lagi yang sedang direncanakan.</p>
   </div>
 
   <div class="feature-card">
     <img src="/icons/desktop_cloud.svg" alt="CORS aktif" />
     <h3>CORS aktif</h3>
-    <p>Siap untuk proyek berbasis peramban.</p>
+    <p>Siap pakai untuk proyek berbasis browser.</p>
   </div>
 
   <div class="feature-card">
-    <img src="/icons/groups.svg" alt="Didorong komunitas" />
-    <h3>Didorong komunitas</h3>
-    <p>Umpan balik dan saran selalu disambut dengan baik.</p>
+    <img src="/icons/groups.svg" alt="Berbasis komunitas" />
+    <h3>Berbasis komunitas</h3>
+    <p>Masukan dan saran darimu selalu kami sambut.</p>
   </div>
 
 </div>
 
-## Dukungan, Saran & Umpan Balik
+## Dukungan, Saran & Masukan
 
-Jika Anda membutuhkan bantuan dengan API kami, Anda dapat bergabung dengan [server Discord](https://nekos.best/discord?ref=docs) kami kapan saja.
+Kalau kamu butuh bantuan terkait API kami, silakan bergabung ke [server Discord](https://nekos.best/discord?ref=docs) kami kapan saja.
 
-Saran dan umpan balik sangat kami harapkan, keduanya dapat dibagikan melalui Server Discord kami atau [email](mailto:contact@nekos.best).
+Saran dan masukan sangat kami hargai—kamu bisa menyampaikannya melalui server Discord atau lewat [email](mailto:contact@nekos.best).

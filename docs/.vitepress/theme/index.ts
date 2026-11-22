@@ -15,7 +15,7 @@ export default {
   },
   enhanceApp({ app, router }) {
     if (typeof window !== "undefined") {
-      const supportedLangs = ["de", "id", "pt", "es", "vi", "fr", "ru", "zh-CN", "ja", "pl", "tr", "uk", "owo", "ko", "zh-TW", "it", "ar"];
+      const supportedLangs = ["de", "id", "pt", "es", "vi", "fr", "ru", "zh-CN", "ja", "pl", "tr", "uk", "owo", "ko", "zh-TW", "it", "ar", "th", "hu", "hi"];
 
       // Track & save language choice when user navigates
       router.onAfterRouteUpdate = (to) => {
@@ -49,6 +49,9 @@ export default {
           ko: "ko",
           it: "it",
           ar: "ar",
+          th: "th",
+          hu: "hu",
+          hi: "hi",
         };
         let matched = langMap[prefix] || null;
         if (!matched && userLang.includes("zh")) {
